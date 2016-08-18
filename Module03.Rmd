@@ -76,3 +76,60 @@ barplot(prob, # Specify the vector describing the bars to plot
 ```
 
 Notice that while the two graphs appear visually similar, in the one we are plotting frequencies and the other probabilities. This is reflected in the y-axis.
+
+####Calculate the expected value, variance, and standard deviation of a discrete random variable
+
+First use the combine function, c(), to enter the $x_i$ values for the random variable, and the observed frequencies for each $x_i$
+```{r}
+values <- c(1, 2, 3, 4, 5, 6, 7)
+freq <- c(25, 89, 101, 96, 58, 39, 12)
+```
+
+Now calculate the probability $P(x_i)$ for each value.
+```{r}
+prob <- freq / sum(freq)
+```
+
+Calculate the sum of the product of $x_i$ and $P(x_i)$, 
+
+$\sum x_{i}\cdot P(x_{i})$ 
+
+and save this as ev.
+```{r}
+ev <- sum(values * prob)
+ev
+```
+
+Next, we calculate the deviations from expected value for each $x_i$. Using mathematical notation, this is
+
+$x_i - \mu_x$
+
+```{r}
+devs <- values - ev
+```
+
+And then square each deviation to get $(x_i - \mu_x)^2$.
+```{r}
+sqdevs <- (devs)^2
+```
+
+To get the variance, we multiply each deviation by the probability $P(x_i)$ and add them up.
+
+$\sum (x_i - \mu_x)^2\cdot P(x_{i})$
+
+```{r}
+var <- sum(sqdevs * prob)
+var
+```
+
+Then, to calculate the standard deviation we take the square root of the variance.
+```{r}
+stdev <- sqrt(var)
+stdev
+```
+
+To finish off, create a table of the intermediate results we've calculated. The function cbind() combines the vectors we have created into a table.
+```{r}
+evvar <- cbind(values, freq, prob, devs, sqdevs)
+evvar
+```
