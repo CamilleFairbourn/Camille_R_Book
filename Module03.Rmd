@@ -5,26 +5,74 @@ output: html_document
 ---
 #Module 3 Discrete Random Variables
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+As mentioned previously, each time you open a new RStudio session, you need to run the following three commands.
+
+```{r message = FALSE}
+require(mosaic)
+require(openintro)
+require(MASS)
+```
+####Creating a probability distribution from calculated theoretical probabilities
+
+In the lectures we see a graph of the discrete random variable for X, the number of girls in a 3-child family
+
+We'll use the combine function c() to create a vector of values for the random variable X and then use it again to create a vector for the probabilities.
+
+```{r}
+values<-c(0, 1, 2, 3)
+probs<-c(1/8, 3/8, 3/8, 1/8)
 ```
 
-## R Markdown
+Next, we'll use the barplot() function to create a barchart of the probability distribution
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
-
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
-
-```{r cars}
-summary(cars)
+```{r}
+barplot(probs, # Specify the vector describing the bars to plot
+        names.arg = values, # Specify the vector of names to be plotted below each bar
+        ylim = c(0,.4), # Specify the limits for the y-axis
+        main = "3 child families", # Create a title for the chart
+        ylab = "Probability", # Label the y-axis
+        xlab = "Number of girls", #Label the x-axis
+        col = "#D4A7B1") #Specify the color. Here I used a hexadecimal value.
 ```
 
-## Including Plots
+####Creating a probability distribution from observed frequencies
 
-You can also embed plots, for example:
+Example: Restaurant Seating
 
-```{r pressure, echo=FALSE}
-plot(pressure)
+Again we use the combine function, c(), to create a vector of values for the random variable X, the number of people in a restaurant party. We'll also use it to create a vector of the observed frequency for each value of X.
+
+```{r}
+values <- c(1, 2, 3, 4, 5, 6, 7)
+freq <- c(25, 89, 101, 96, 58, 39, 12)
 ```
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+To calculate the probabilities, we need to divide each frequency by the total. The function sum() will calculate the total for us.
+
+```{r}
+prob <- freq / sum(freq)
+```
+
+As above, we use the barplot() function to create the graph of the *frequencies*.
+
+```{r}
+barplot(freq, # Specify the vector describing the bars to plot
+        names.arg = values, # Specify the vector of names to be plotted below each bar
+        main = "Restaurant Seating", # Create a title for the chart
+        ylab = "Frequency", # Label the y-axis
+        xlab = "Party Size", #Label the x-axis
+        col = "#F3A176") #Specify the color. Here I used a hexadecimal value.
+```
+
+We can also use barplot() to create the probability graph.
+
+```{r]}
+barplot(prob, # Specify the vector describing the bars to plot
+        names.arg = values, # Specify the vector of names to be plotted below each bar
+        ylim = c(0,.25), # Specify the limits for the y-axis
+        main = "Restaurant Seating", # Create a title for the chart
+        ylab = "Probability", # Label the y-axis
+        xlab = "Party Size", #Label the x-axis
+        col = "#D4A7B1") #Specify the color. Here I used a hexadecimal value.
+```
+
+Notice that while the two graphs appear visually similar, in the one we are plotting frequencies and the other probabilities. This is reflected in the y-axis.
