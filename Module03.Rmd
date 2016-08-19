@@ -5,6 +5,8 @@ output: html_document
 ---
 #Module 3 Discrete Random Variables
 
+##Discrete Random Variables
+
 As mentioned previously, each time you open a new RStudio session, you need to run the following three commands.
 
 ```{r message = FALSE}
@@ -133,3 +135,106 @@ To finish off, create a table of the intermediate results we've calculated. The 
 evvar <- cbind(values, freq, prob, devs, sqdevs)
 evvar
 ```
+
+##Binomial Random Variables
+
+
+
+We can use the general expected value and variance formulas to calculate the expected value and variance of a binomial random variable.
+
+As an example, let's assume we have a binomial random variable for a sample size of 12 and a fixed probability p = 0.12. We proceed as before, creating a vector of values $x_i$, and probabilities $P(x_i)$.
+
+```{r}
+values <- c(0:12) # This creates a vector of values from 0 to 12.
+values # Check to see that the vector is correct.
+probs<-dbinom(values, size = 12, prob = .12) # This calculates the binomial probabilities.
+```
+
+Calculate the expected value, $\sum x_{i}\cdot P(x_{i})$, as we did before.
+```{r}
+ev<-sum(values*probs)
+ev
+```
+
+And repeat the steps we used above to find the variance and standard deviation.
+
+1. Calculate the deviations from expected value for each $x_i$ to get a vector of $x_i - \mu_x$
+
+```{r}
+devs<-values-ev
+```
+
+2. Square each deviation to get $(x_i - \mu_x)^2$.
+
+```{r}
+sqdevs<-(devs)^2
+```
+
+3. Multiply each deviation by the probability $P(x_i)$ and add them up to get the variance.
+
+$\sum (x_i - \mu_x)^2\cdot P(x_{i})$
+```{r}
+var<-sum(sqdevs*probs)
+var
+```
+
+4. Take the square root of the variance to find the standard deviation.
+```{r}
+stdev<-sqrt(var)
+stdev
+```
+
+It is, of course, much simpler to use the formulas:
+For Expected Value:
+$\mu_x = n\cdot p$
+
+```{r}
+12 * 0.12
+```
+
+For Variance:
+$\sigma_x^2 = n\cdot p\cdot (1-p)$
+```{r}
+12 * 0.12 * (1 - 0.12)
+```
+
+For Standard Deviation: $\sigma_x = \sqrt{\sigma_x^2}$
+```{r}
+sqrt(12 * 0.12 * (1 - 0.12))
+```
+
+##Poisson Random Variables
+
+#create a vector of Poisson probabilities 
+#specify lambda
+lam <- c(7.5)
+#specify the number of probabilities you want to calculate
+#make sure the number is high enough to include all of the 
+#probabilities that are significantly non-zero.
+values <- c(0:30)
+
+#create the vector
+probsp <- dpois(values, lam, log=FALSE)
+probsp
+
+ev <- sum(values*probsp)
+ev
+
+#calculate the deviations from expected value for each x_i
+devs <- values-ev
+
+#square each deviation
+sqdevs <- (devs)^2
+
+#multiply each deviation by the probability p(x_i) 
+#and add them up to get the variance
+var <- sum(sqdevs*probsp)
+var
+
+#calculate the standard deviation
+stdev <- sqrt(var)
+stdev
+
+#make a barplot of the Poisson probability distribution
+barplot(probsp, ylim = c(0, .17), names.arg = values, col = "#F3A176", 
+        main = expression(paste("Poisson, ", lambda, "= 7.5")))
