@@ -140,9 +140,29 @@ evvar
 
 
 
-We can use the general expected value and variance formulas to calculate the expected value and variance of a binomial random variable.
+To calculate individual values for the binomial distribution (equivalent to the binompdf funtion on the TI-84 calculator) we use the dbinom() function. The syntax is
 
-As an example, let's assume we have a binomial random variable for a sample size of 12 and a fixed probability p = 0.12. We proceed as before, creating a vector of values $x_i$, and probabilities $P(x_i)$.
+dbinom(x, n, p)
+
+which is a different order of the same numbers required for the calculator function.
+
+As an example, let's assume we have a binomial random variable for a sample size of 12 and a fixed probability p = 0.12. Use dbinom() to find $P(x = 1)$.
+
+```{r}
+dbinom(1, 12, 0.12)
+```
+
+Use your calculator to verify this result. Try some others on your own to get the hang of it.
+
+There is also an R function that is equivalent to the binomcdf function on the calculator, pbinom(). If we want $P(x \leq 1)$ we use the function:
+
+```{r}
+pbinom(1, 12, 0.12)
+```
+
+Verify this result with your calculator.
+
+We can use the general expected value and variance formulas to calculate the expected value and variance of a binomial random variable. We'll walk through the steps below to show that it gives the same results as the formulas in the lecture. We proceed as before, creating a vector of values $x_i$, and probabilities $P(x_i)$.
 
 ```{r}
 values <- c(0:12) # This creates a vector of values from 0 to 12.
@@ -152,7 +172,7 @@ probs<-dbinom(values, size = 12, prob = .12) # This calculates the binomial prob
 
 Calculate the expected value, $\sum x_{i}\cdot P(x_{i})$, as we did before.
 ```{r}
-ev<-sum(values*probs)
+ev <- sum(values * probs)
 ev
 ```
 
@@ -161,26 +181,26 @@ And repeat the steps we used above to find the variance and standard deviation.
 1. Calculate the deviations from expected value for each $x_i$ to get a vector of $x_i - \mu_x$
 
 ```{r}
-devs<-values-ev
+devs <- values - ev
 ```
 
 2. Square each deviation to get $(x_i - \mu_x)^2$.
 
 ```{r}
-sqdevs<-(devs)^2
+sqdevs <- (devs)^2
 ```
 
 3. Multiply each deviation by the probability $P(x_i)$ and add them up to get the variance.
 
 $\sum (x_i - \mu_x)^2\cdot P(x_{i})$
 ```{r}
-var<-sum(sqdevs*probs)
+var <- sum(sqdevs * probs)
 var
 ```
 
 4. Take the square root of the variance to find the standard deviation.
 ```{r}
-stdev<-sqrt(var)
+stdev <- sqrt(var)
 stdev
 ```
 
