@@ -225,36 +225,99 @@ sqrt(12 * 0.12 * (1 - 0.12))
 
 ##Poisson Random Variables
 
-#create a vector of Poisson probabilities 
-#specify lambda
-lam <- c(7.5)
-#specify the number of probabilities you want to calculate
-#make sure the number is high enough to include all of the 
-#probabilities that are significantly non-zero.
+For the Poisson random variable, let's consider a Poisson distribution with $\lambda = 7.5$.
+
+Use the dpois() function to find exact probabilities. For example, $P(x = 5)$ is found using the command:
+
+```{r}
+dpois(5, 7.5)
+```
+
+Verify this using the poissonpdf function on your calculator.
+
+As with the binomial distribution, you can use the ppois() function like the poissoncdf calculator function. For example, $P(x\leq 5)$ is found using
+
+```{r}
+ppois(5, 7.5)
+```
+
+Let's use R to verify the formulas for the expected value and standard deviation of a Poisson random variable. Because Poisson variables are infinite discrete variables, we will need to create a vector that "goes to infinity," that is, pick an upper value large enough that the probability for that value is very, very small.
+
+First, specify a value for lambda. In our example, $\lambda = 7.5$, but you could easily change this to any other number.
+```{r}
+lam <- 7.5
+```
+
+Next, create the vector of values for x. I've chosen 30 as the upper value, but you could choose something larger if you like.
+```{r}
 values <- c(0:30)
+```
 
-#create the vector
-probsp <- dpois(values, lam, log=FALSE)
-probsp
-
-ev <- sum(values*probsp)
+Now, create the vector of probabilities using the dpois() function.
+```{r}
+probs <- dpois(values, lam)
+probs
+```
+Calculate the expected value, $\sum x_{i}\cdot P(x_{i})$, as we did before.
+```{r}
+ev <- sum(values * probs)
 ev
+```
 
-#calculate the deviations from expected value for each x_i
-devs <- values-ev
+Notice that this is the same as our value for lambda. Try this with other values to see if you get the same result.
 
-#square each deviation
+To find the variance, repeat the steps.
+
+1. Calculate the deviations from expected value for each $x_i$ to get a vector of $x_i - \mu_x$
+
+```{r}
+devs <- values - ev
+```
+
+2. Square each deviation to get $(x_i - \mu_x)^2$.
+
+```{r}
 sqdevs <- (devs)^2
+```
 
-#multiply each deviation by the probability p(x_i) 
-#and add them up to get the variance
-var <- sum(sqdevs*probsp)
+3. Multiply each deviation by the probability $P(x_i)$ and add them up to get the variance.
+
+$\sum (x_i - \mu_x)^2\cdot P(x_{i})$
+```{r}
+var <- sum(sqdevs * probs)
 var
+```
 
-#calculate the standard deviation
+4. Take the square root of the variance to find the standard deviation.
+```{r}
 stdev <- sqrt(var)
 stdev
+```
 
-#make a barplot of the Poisson probability distribution
-barplot(probsp, ylim = c(0, .17), names.arg = values, col = "#F3A176", 
-        main = expression(paste("Poisson, ", lambda, "= 7.5")))
+It is, of course, much simpler to use the formulas:
+For Expected Value:
+
+$\mu_x = \lambda$
+
+For Variance:
+
+For Variance:
+$\sigma_x^2 = \lambda$
+```{r}
+lam
+```
+
+For Standard Deviation: $\sigma_x = \sqrt{\lambda}$
+```{r}
+sqrt(lam)
+```
+Before we go, let's make a barplot of the Poisson probability distribution.
+```{r}
+barplot(probs, # Specify the vector describing the bars to plot
+        names.arg = values, # Specify the vector of names to be plotted below each bar
+        ylim = c(0,.17), # Specify the limits for the y-axis. 
+        main = expression(paste("Poisson Distribution with ", lambda, " = 7.5")), # Create a title for the chart
+        ylab = "Probability", # Label the y-axis
+        xlab = "X", #Label the x-axis
+        col = "#D4A7B1") #Specify the color. Here I used a hexadecimal value.barplot(probs, 
+```        
