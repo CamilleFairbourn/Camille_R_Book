@@ -32,7 +32,7 @@ Using algebraic commands:
 
 ####Using basic statistical functions in R
 
-We can use R commands to accomplish the same task. First we form a vector or list in R of the scores. We do this using the combine, c(), function. Then we wrap this inside the mean() function, which calculates the average.
+We can use R commands to accomplish the same task. First we form a vector or list in R of the scores. We do this using the combine, `c()`, function. Then we wrap this inside the `mean()` function, which calculates the average.
 
 
 ```r
@@ -43,7 +43,7 @@ mean(c(78,73,92,85,75,98))
 ## [1] 83.5
 ```
 
-Similarly, we can use the R function sd() to calculate the sample standard deviation of the exam scores.
+Similarly, we can use the R function `sd()` to calculate the sample standard deviation of the exam scores.
 
 
 ```r
@@ -63,7 +63,7 @@ In the case where you want to use the same list or vector repeatedly, it's a goo
 exams <- c(78,73,92,85,75,98)
 ```
 
-Now, we can use the R function var() to calculate the variance of the exam scores, using the name of the vector instead of typing out the values again.
+Now, we can use the R function `var()` to calculate the variance of the exam scores, using the name of the vector instead of typing out the values again.
 
 
 ```r
@@ -76,7 +76,7 @@ var(exams)
 
 ####Using the favstats function
 
-In the mosaic package, there is a function called favstats(), which wil calculate several statistics at once. You must have the mosaic package installed *and* loaded for this function to work.
+In the mosaic package, there is a function called `favstats()`, which wil calculate several statistics at once. You must have the mosaic package installed *and* loaded for this function to work.
 
 
 ```r
@@ -94,7 +94,7 @@ Notice that the mean and sd are the same as we calculated up above.
 
 ####Looking at a pre-loaded data set
 
-Many of the packages used in R include sample data sets. When you load the openintro package, you gain access to this data. We'll use the View() function to look at salary data for Major League Baseball players in 2010. Notice that there is a capital "V" for this command. Punctuation matters! The command below will open the dataset in a new tab RStudio.
+Many of the packages used in R include sample data sets. When you load the openintro package, you gain access to this data. We'll use the `View()` function to look at salary data for Major League Baseball players in 2010. Notice that there is a capital "V" for this command. Punctuation matters! The command below will open the dataset in a new tab RStudio.
 
 
 ```r
@@ -105,7 +105,7 @@ You'll want to pay attention to how the data is labeled and coded. Specifically,
 
 ####Creating a bar chart
 
-Suppose we want to create a visual representation of the number of players who play each position on a baseball team. This is a nominal variable, so we want to create a bar chart.  We can do this using the barchart() function.
+Suppose we want to create a visual representation of the number of players who play each position on a baseball team. This is a nominal variable, so we want to create a bar chart.  We can do this using the `barchart()` function.
 
 
 ```r
@@ -128,7 +128,7 @@ barchart(MLB$position, # We list the dataset first, followed by $ and then the n
 
 ![](Module01_files/figure-html/unnamed-chunk-9-1.png)<!-- -->
 
-The MLB data set includes the salary for each player. Salary is an interval variable, so we can use the favstats() function to calculate statistics. Notice the notation: MLB$salary tells R to look in the data set MLB for the variable salary.
+The MLB data set includes the salary for each player. Salary is an interval variable, so we can use the `favstats()` function to calculate statistics. Notice the notation: MLB$salary tells R to look in the data set MLB for the variable salary.
 
 
 ```r
@@ -142,7 +142,7 @@ favstats(MLB$salary)
 
 ####Creating a histogram
 
-To create a visual representation of an interval variable, we use a histogram. The R function hist() does this. 
+To create a visual representation of an interval variable, we use a histogram. The R function `hist()` does this. 
 
 
 ```r
@@ -151,7 +151,7 @@ hist(MLB$salary)
 
 ![](Module01_files/figure-html/unnamed-chunk-11-1.png)<!-- -->
 
-As with the barchart, we want to modify the basic hist() function to add or change features of the plot Again, pay attention to the comments in the code below to understand what each additional argument does.
+As with the barchart, we want to modify the basic `hist()` function to add or change features of the plot Again, pay attention to the comments in the code below to understand what each additional argument does.
 
 
 ```r
@@ -165,7 +165,7 @@ hist(MLB$salary, # The first argument tells R which variable to graph
 
 ####Create a boxplot
 
-We can use the R function boxplot() to create a boxplot of the salary variable in the MLB data set.
+We can use the R function `boxplot()` to create a boxplot of the salary variable in the MLB data set.
 
 
 ```r
@@ -187,7 +187,7 @@ boxplot(MLB$salary, # Specify the variable to graph
 
 ####Side-by-side boxplots
 
-We often want to compare the numerical results of an interval variable based on the classification of a nominal variable. Side-by-side boxplots allow us to do this easily. Using the boxplot() command, we name the interval variable first, then connect it to a nominal variable using the tilde '~'. You must then specify the data set as an additional argument to the function.
+We often want to compare the numerical results of an interval variable based on the classification of a nominal variable. Side-by-side boxplots allow us to do this easily. Using the `boxplot()` command, we name the interval variable first, then connect it to a nominal variable using the tilde '~'. You must then specify the data set as an additional argument to the function.
 
 
 ```r

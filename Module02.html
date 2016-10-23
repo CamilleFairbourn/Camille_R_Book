@@ -131,7 +131,7 @@ require(MASS)</code></pre>
 <p>In Module 2 we talk about nominal variables and create contingency tables to organize the counts of two different nominal variables.</p>
 <p>First, we’ll read in the flightNYC dataset. This is a subset of the data available in the nycflights13 package.</p>
 <pre class="r"><code>flightNYC &lt;- read.csv(&quot;C:/Users/Owner/Dropbox/Work/TheRFolder/Datasets/16-Fall/flightNYC.csv&quot;)</code></pre>
-<p>Use the View() function to look at the variables in the dataset. This data measures 6 different variables on a sample of 600 flights from the JFK and LaGuardia (LGA) airports in New York City during 2013. Three of these variables are nominal and three are interval.</p>
+<p>Use the <code>View()</code> function to look at the variables in the dataset. This data measures 6 different variables on a sample of 600 flights from the JFK and LaGuardia (LGA) airports in New York City during 2013. Three of these variables are nominal and three are interval.</p>
 <table>
 <thead>
 <tr class="header">
@@ -175,7 +175,7 @@ require(MASS)</code></pre>
 </table>
 <pre class="r"><code>View(flightNYC)</code></pre>
 <p>We can easily create a barchart for each of the nominal variables: origin, airline, and ontime.</p>
-<p>Watch how the code and the chart change as we add arguments to the barchart() function.</p>
+<p>Watch how the code and the chart change as we add arguments to the <code>barchart()</code> function.</p>
 <div id="basic-barchart" class="section level4">
 <h4>Basic barchart</h4>
 <pre class="r"><code>barchart(flightNYC$origin)</code></pre>
@@ -219,7 +219,7 @@ require(MASS)</code></pre>
 </div>
 <div id="creating-a-contingency-table" class="section level3">
 <h3>Creating a contingency table</h3>
-<p>To create a contingency table, we use the xtabs() function. We need to specify which variables we want R to tabulate first, then indicate the data set. In the code below we create a contingency table for gender and broadband and store the result as contable.</p>
+<p>To create a contingency table, we use the <code>xtabs()</code> function. We need to specify which variables we want R to tabulate first, then indicate the data set. In the code below we create a contingency table for gender and broadband and store the result as contable.</p>
 <pre class="r"><code>contable &lt;- xtabs(~airline + ontime, data = flightNYC)
 #Read the output from your table
 contable</code></pre>

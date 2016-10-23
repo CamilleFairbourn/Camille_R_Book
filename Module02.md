@@ -19,7 +19,7 @@ First, we'll read in the flightNYC dataset. This is a subset of the data availab
 flightNYC <- read.csv("C:/Users/Owner/Dropbox/Work/TheRFolder/Datasets/16-Fall/flightNYC.csv")
 ```
 
-Use the View() function to look at the variables in the dataset. This data measures 6 different variables on a sample of 600 flights from the JFK and LaGuardia (LGA) airports in New York City during 2013. Three of these variables are nominal and three are interval.
+Use the `View()` function to look at the variables in the dataset. This data measures 6 different variables on a sample of 600 flights from the JFK and LaGuardia (LGA) airports in New York City during 2013. Three of these variables are nominal and three are interval.
 
 Variable  | Type     | Description
 ----------|----------|-------------
@@ -37,7 +37,7 @@ View(flightNYC)
 
 We can easily create a barchart for each of the nominal variables: origin, airline, and ontime.
 
-Watch how the code and the chart change as we add arguments to the barchart() function.
+Watch how the code and the chart change as we add arguments to the `barchart()` function.
 
 ####Basic barchart
 
@@ -99,7 +99,7 @@ barchart(flightNYC$airline, horizontal=FALSE,
 ![](Module02_files/figure-html/unnamed-chunk-9-1.png)<!-- -->
 
 ###Creating a contingency table
-To create a contingency table, we use the xtabs() function. We need to specify which variables we want R to tabulate first, then indicate the data set. In the code below we create a contingency table for gender and broadband and store the result as contable.
+To create a contingency table, we use the `xtabs()` function. We need to specify which variables we want R to tabulate first, then indicate the data set. In the code below we create a contingency table for gender and broadband and store the result as contable.
 
 ```r
 contable <- xtabs(~airline + ontime, data = flightNYC)
@@ -113,5 +113,3 @@ contable
 ##   Delta  145 328
 ##   United  42  77
 ```
-
-

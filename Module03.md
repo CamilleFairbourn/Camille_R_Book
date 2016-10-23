@@ -16,7 +16,7 @@ require(MASS)
 
 In the lectures we see a graph of the discrete random variable for X, the number of girls in a 3-child family
 
-We'll use the combine function c() to create a vector of values for the random variable X and then use it again to create a vector for the probabilities.
+We'll use the combine function `c()` to create a vector of values for the random variable X and then use it again to create a vector for the probabilities.
 
 
 ```r
@@ -24,7 +24,7 @@ values<-c(0, 1, 2, 3)
 probs<-c(1/8, 3/8, 3/8, 1/8)
 ```
 
-Next, we'll use the barplot() function to create a barchart of the probability distribution
+Next, we'll use the `barplot()` function to create a barchart of the probability distribution
 
 
 ```r
@@ -43,7 +43,7 @@ barplot(probs, # Specify the vector describing the bars to plot
 
 **Example: Restaurant Seating**
 
-Again we use the combine function, c(), to create a vector of values for the random variable X, the number of people in a restaurant party. We'll also use it to create a vector of the observed frequency for each value of X.
+Again we use the combine function, `c()`, to create a vector of values for the random variable X, the number of people in a restaurant party. We'll also use it to create a vector of the observed frequency for each value of X.
 
 
 ```r
@@ -51,14 +51,14 @@ values <- c(1, 2, 3, 4, 5, 6, 7)
 freq <- c(25, 89, 101, 96, 58, 39, 12)
 ```
 
-To calculate the probabilities, we need to divide each frequency by the total. The function sum() will calculate the total for us.
+To calculate the probabilities, we need to divide each frequency by the total. The function `sum()` will calculate the total for us.
 
 
 ```r
 prob <- freq / sum(freq)
 ```
 
-As above, we use the barplot() function to create the graph of the *frequencies*.
+As above, we use the `barplot()` function to create the graph of the *frequencies*.
 
 
 ```r
@@ -72,7 +72,7 @@ barplot(freq, # Specify the vector describing the bars to plot
 
 ![](Module03_files/figure-html/unnamed-chunk-6-1.png)<!-- -->
 
-We can also use barplot() to create the probability graph.
+We can also use `barplot()` to create the probability graph.
 
 
 ```r
@@ -91,7 +91,7 @@ Notice that while the two graphs appear visually similar, in the one we are plot
 
 ####Calculate the expected value, variance, and standard deviation of a discrete random variable
 
-First use the combine function, c(), to enter the $x_i$ values for the random variable, and the observed frequencies for each $x_i$
+First use the combine function, `c()`, to enter the $x_i$ values for the random variable, and the observed frequencies for each $x_i$
 
 ```r
 values <- c(1, 2, 3, 4, 5, 6, 7)
@@ -140,8 +140,8 @@ $\sum (x_i - \mu_x)^2\cdot P(x_{i})$
 
 
 ```r
-var <- sum(sqdevs * prob)
-var
+variance <- sum(sqdevs * prob)
+variance
 ```
 
 ```
@@ -151,7 +151,7 @@ var
 Then, to calculate the standard deviation we take the square root of the variance.
 
 ```r
-stdev <- sqrt(var)
+stdev <- sqrt(variance)
 stdev
 ```
 
@@ -159,7 +159,7 @@ stdev
 ## [1] 1.484149
 ```
 
-To finish off, create a table of the intermediate results we've calculated. The function cbind() combines the vectors we have created into a table.
+To finish off, create a table of the intermediate results we've calculated. The function `cbind()` combines the vectors we have created into a table.
 
 ```r
 evvar <- cbind(values, freq, prob, devs, sqdevs)
@@ -181,13 +181,13 @@ evvar
 
 
 
-To calculate individual values for the binomial distribution (equivalent to the binompdf funtion on the TI-84 calculator) we use the dbinom() function. The syntax is
+To calculate individual values for the binomial distribution (equivalent to the binompdf funtion on the TI-84 calculator) we use the `dbinom()` function. The syntax is
 
-dbinom(x, n, p)
+`dbinom(x, n, p)`
 
 which is a different order of the same numbers required for the calculator function.
 
-As an example, let's assume we have a binomial random variable for a sample size of 12 and a fixed probability p = 0.12. Use dbinom() to find $P(x = 1)$.
+As an example, let's assume we have a binomial random variable for a sample size of 12 and a fixed probability p = 0.12. Use `dbinom()` to find $P(x = 1)$.
 
 
 ```r
@@ -200,7 +200,7 @@ dbinom(1, 12, 0.12)
 
 Use your calculator to verify this result. Try some others on your own to get the hang of it.
 
-There is also an R function that is equivalent to the binomcdf function on the calculator, pbinom(). If we want $P(x \leq 1)$ we use the function:
+There is also an R function that is equivalent to the binomcdf function on the calculator, `pbinom()`. If we want $P(x \leq 1)$ we use the function:
 
 
 ```r
@@ -261,8 +261,8 @@ sqdevs <- (devs)^2
 $\sum (x_i - \mu_x)^2\cdot P(x_{i})$
 
 ```r
-var <- sum(sqdevs * probs)
-var
+variance <- sum(sqdevs * probs)
+variance
 ```
 
 ```
@@ -272,7 +272,7 @@ var
 4. Take the square root of the variance to find the standard deviation.
 
 ```r
-stdev <- sqrt(var)
+stdev <- sqrt(variance)
 stdev
 ```
 
@@ -318,7 +318,7 @@ sqrt(12 * 0.12 * (1 - 0.12))
 
 For the Poisson random variable, let's consider a Poisson distribution with $\lambda = 7.5$.
 
-Use the dpois() function to find exact probabilities. For example, $P(x = 5)$ is found using the command:
+Use the `dpois()` function to find exact probabilities. For example, $P(x = 5)$ is found using the command:
 
 
 ```r
@@ -331,7 +331,7 @@ dpois(5, 7.5)
 
 Verify this using the poissonpdf function on your calculator.
 
-As with the binomial distribution, you can use the ppois() function like the poissoncdf calculator function. For example, $P(x\leq 5)$ is found using
+As with the binomial distribution, you can use the `ppois()` function like the poissoncdf calculator function. For example, $P(x\leq 5)$ is found using
 
 
 ```r
@@ -356,7 +356,7 @@ Next, create the vector of values for x. I've chosen 30 as the upper value, but 
 values <- c(0:30)
 ```
 
-Now, create the vector of probabilities using the dpois() function.
+Now, create the vector of probabilities using the `dpois()` function.
 
 ```r
 probs <- dpois(values, lam)
@@ -406,8 +406,8 @@ sqdevs <- (devs)^2
 $\sum (x_i - \mu_x)^2\cdot P(x_{i})$
 
 ```r
-var <- sum(sqdevs * probs)
-var
+variance <- sum(sqdevs * probs)
+variance
 ```
 
 ```
@@ -417,7 +417,7 @@ var
 4. Take the square root of the variance to find the standard deviation.
 
 ```r
-stdev <- sqrt(var)
+stdev <- sqrt(variance)
 stdev
 ```
 
@@ -465,3 +465,48 @@ barplot(probs, # Specify the vector describing the bars to plot
 ```
 
 ![](Module03_files/figure-html/unnamed-chunk-38-1.png)<!-- -->
+
+##Histograms, Again
+
+There are two types of histograms we will want to construct in this class: frequency histograms, and density histograms.
+
+Frequency histograms are the default when you use the `hist()` function in R. The function divides the data into bins or intervals and graphs bars to represent the count in each interval.
+
+####View the MLB data set
+
+```r
+View(MLB) #Look at the data frame to see the names of the variables
+```
+
+We want the variable salary in the MLB dataset. Notice that we put the name of the dataset first, then $, then the name of the variable.
+
+```r
+hist(MLB$salary) 
+```
+
+![](Module03_files/figure-html/unnamed-chunk-40-1.png)<!-- -->
+
+Modify the arguments to the function to add labels and titles to your histogram.
+
+```r
+hist(MLB$salary, # This tells R which variable to graph
+     main = "Salary of MLB players", # This puts a title on the graph
+     xlab = "Salary", # This changes the label on the x-axis
+     col = "pink") # This changes the fill color of the bars 
+```
+
+![](Module03_files/figure-html/unnamed-chunk-41-1.png)<!-- -->
+
+A density histogram is visually similar to the frequency histogram but instead represents the *proportion* of the data in each interval. This forces the area of the bars in the histogram to equal 1. The area of any particular bar then equals the probability of a randomly selected data point falling in that particular interval.
+
+To make a density histogram of the variable salary you add the argument `prob = TRUE` to the hist function.
+
+```r
+hist(MLB$salary, # This tells R which variable to graph
+     prob = TRUE,  # This tells R to make a density histogram
+     main = "Salary of MLB players", # This puts a title on the graph
+     xlab = "Salary", # This changes the label on the x-axis
+     col = "skyblue") # This changes the fill color of the bars 
+```
+
+![](Module03_files/figure-html/unnamed-chunk-42-1.png)<!-- -->
