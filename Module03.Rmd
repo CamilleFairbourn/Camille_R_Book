@@ -41,7 +41,7 @@ barplot(probs, # Specify the vector describing the bars to plot
 
 ####Creating a probability distribution from observed frequencies
 
-Example: Restaurant Seating
+**Example: Restaurant Seating**
 
 Again we use the combine function, c(), to create a vector of values for the random variable X, the number of people in a restaurant party. We'll also use it to create a vector of the observed frequency for each value of X.
 
@@ -321,5 +321,5 @@ barplot(probs, # Specify the vector describing the bars to plot
         main = expression(paste("Poisson Distribution with ", lambda, " = 7.5")), # Create a title for the chart
         ylab = "Probability", # Label the y-axis
         xlab = "X", #Label the x-axis
-        col = "#D4A7B1") #Specify the color. Here I used a hexadecimal value.barplot(probs, 
+        col = "#D4A7B1") #Specify the color. Here I used a hexadecimal value. 
 ```        
