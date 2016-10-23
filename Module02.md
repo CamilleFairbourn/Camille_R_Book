@@ -13,26 +13,36 @@ require(MASS)
 
 In Module 2 we talk about nominal variables and create contingency tables to organize the counts of two different nominal variables.
 
-First, we'll read in the Youngprof dataset.
+First, we'll read in the flightNYC dataset. This is a subset of the data available in the nycflights13 package.
 
 ```r
-Youngprof<-read.csv("http://www.math.usu.edu/cfairbourn/Stat2300/RStudioFiles/data/Youngprof.csv")
+flightNYC <- read.csv("C:/Users/Owner/Dropbox/Work/TheRFolder/Datasets/16-Fall/flightNYC.csv")
 ```
 
-Use the View() function to look at the variables in the dataset. This data measures 8 different variables on a sample of 400 subscribers to a magazine. Four of these variables are nominal and four are interval.
+Use the View() function to look at the variables in the dataset. This data measures 6 different variables on a sample of 600 flights from the JFK and LaGuardia (LGA) airports in New York City during 2013. Three of these variables are nominal and three are interval.
+
+Variable  | Type     | Description
+----------|----------|-------------
+origin    | nominal  | Originating airport (JFK or LGA)
+airline   | nominal  | Carrier (Delta or United Airlines)
+ontime    | nominal  | Did the flight depart on time (yes or no)
+distance  | interval | Distance of flight in miles
+dep_delay | interval | Scheduled departure time - Actual departure time
+arr_delay | interval | Scheduled arrival time - Actual arrival time
+
 
 ```r
-View(Youngprof)
+View(flightNYC)
 ```
 
-We can easily create a barchart for each of the nominal variables: gender, realestate, broadband, and children.
+We can easily create a barchart for each of the nominal variables: origin, airline, and ontime.
 
 Watch how the code and the chart change as we add arguments to the barchart() function.
 
 ####Basic barchart
 
 ```r
-barchart(Youngprof$gender)
+barchart(flightNYC$origin)
 ```
 
 ![](Module02_files/figure-html/unnamed-chunk-4-1.png)<!-- -->
@@ -40,7 +50,7 @@ barchart(Youngprof$gender)
 ####Barchart with vertical bars
 
 ```r
-barchart(Youngprof$gender, # Specify the variable to graph
+barchart(flightNYC$origin, # Specify the variable to graph
          horizontal=FALSE) # Change to vertical bars
 ```
 
@@ -49,9 +59,9 @@ barchart(Youngprof$gender, # Specify the variable to graph
 ####Add a chart title
 
 ```r
-barchart(Youngprof$gender, # Specify the variable to graph
+barchart(flightNYC$origin, # Specify the variable to graph
          horizontal = FALSE, # Change to vertical bars
-         main = "Gender of Respondents") # Add chart label
+         main = "Originating Airport") # Add chart label
 ```
 
 ![](Module02_files/figure-html/unnamed-chunk-6-1.png)<!-- -->
@@ -59,9 +69,9 @@ barchart(Youngprof$gender, # Specify the variable to graph
 ####Change the color of the bars
 
 ```r
-barchart(Youngprof$gender, # Specify the variable to graph
+barchart(flightNYC$origin, # Specify the variable to graph
          horizontal = FALSE, # Change to vertical bars
-         main = "Gender of Respondents", # Add chart label
+         main = "Originating Airport", # Add chart label
          col = "skyblue4") #change bar color
 ```
 
@@ -70,20 +80,20 @@ barchart(Youngprof$gender, # Specify the variable to graph
 ####Modify the y-axis label
 
 ```r
-barchart(Youngprof$gender, # Specify the variable to graph
+barchart(flightNYC$origin, # Specify the variable to graph
          horizontal = FALSE, # Change to vertical bars
-         main = "Gender of Respondents", # Add chart label
+         main = "Originating Airport", # Add chart label
          col = "skyblue4", #change bar color 
          ylab = "Count") #change vertical axis label
 ```
 
 ![](Module02_files/figure-html/unnamed-chunk-8-1.png)<!-- -->
 
-####Make a barchart for Broadband
+####Make a barchart for airline
 
 ```r
-barchart(Youngprof$broadband, horizontal=FALSE, 
-         main="Broadband Access", col="skyblue4", ylab="Count")
+barchart(flightNYC$airline, horizontal=FALSE, 
+         main="Airline", col="skyblue4", ylab="Count")
 ```
 
 ![](Module02_files/figure-html/unnamed-chunk-9-1.png)<!-- -->
@@ -92,16 +102,16 @@ barchart(Youngprof$broadband, horizontal=FALSE,
 To create a contingency table, we use the xtabs() function. We need to specify which variables we want R to tabulate first, then indicate the data set. In the code below we create a contingency table for gender and broadband and store the result as contable.
 
 ```r
-contable <- xtabs(~gender + broadband, data = Youngprof)
+contable <- xtabs(~airline + ontime, data = flightNYC)
 #Read the output from your table
 contable
 ```
 
 ```
-##         broadband
-## gender    No Yes
-##   Female  69 112
-##   Male    85 144
+##         ontime
+## airline   no yes
+##   Delta  145 328
+##   United  42  77
 ```
 
 
