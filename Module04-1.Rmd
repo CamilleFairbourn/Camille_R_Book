@@ -1,0 +1,54 @@
+---
+title: "Camille's R Book"
+author: "Camille Fairbourn"
+output:
+      html_document:
+        keep_md: true
+---
+
+#Module 4, Part 1: Continuous Random Variables
+
+##Continuous Random Variables
+
+As mentioned previously, each time you open a new RStudio session, you need to run the following three commands.
+
+```{r message = FALSE}
+require(mosaic)
+require(openintro)
+require(MASS)
+```
+
+We're going to look at the Landfill data set, a sample of 200 weights of trucks as they enter the landfill.
+
+First, we read in the dataset.
+```{r}
+Landfill<-read.csv("http://www.math.usu.edu/cfairbourn/Stat2300/RStudioFiles/data/Landfill.csv")
+```
+
+We'll use the `hist()` function to construct a frequency histogram of the truck weights, and include a vertical line at x = 38000.
+```{r}
+hist(Landfill$Weights, 
+     main = "Truck Weights", #Include a chart title
+     xlab = "Weight in pounds", #Change the label for the x-axis
+     col = "lightskyblue", #Change the fill color of the histogram
+     xaxt = 'n') #This leaves the x-axis blank so we can specify the tick marks ourselves.
+axis(side=1, at=seq(30000,55000,2000)) #This sets the tick marks every 2000, starting at 30000 and ending at 55000.
+abline(v=38000, col="red", lwd=3) #Add in a thick vertical line at x=38000
+```
+#Count the trucks that come in underweight
+tally(~Weights<=38000, data=Landfill)
+
+#Construct a density histogram of the truck weights
+hist(Landfill$Weights, main="Truck Weights", prob=TRUE,
+     xlab="Weight in pounds", col="lightskyblue", xaxt='n')
+axis(side=1, at=seq(30000,55000,2000))
+#Add in a thick vertical line at x=38000
+abline(v=38000, col="red", lwd=3)
+
+#Add in the normal curve overlay
+points(seq(min(Landfill$Weights)-1500, max(Landfill$Weights)+1500, length.out=500),
+       dnorm(seq(min(Landfill$Weights)-1500, max(Landfill$Weights)+1500, length.out=500),
+             mean(Landfill$Weights), sd(Landfill$Weights)), type="l", col="darkblue", lwd=2)
+
+#Calculate the area under the normal curve less than 38000
+pnorm(38000, mean=mean(Landfill$Weights), sd=sd(Landfill$Weights))

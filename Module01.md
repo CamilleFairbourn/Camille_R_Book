@@ -1,8 +1,8 @@
-# Camille's R Book
+# USU STAT 2300 Module 1
 Camille Fairbourn  
 #Module 1
 
-##RStudio Introduction video
+[Link to RStudio Introduction video](https://drive.google.com/file/d/0B57yktAdJPDkOEw2WHNCTWpsclU/view?usp=sharing)
 
 ###Lesson C, Page 4
 
@@ -164,6 +164,7 @@ hist(MLB$salary, # The first argument tells R which variable to graph
 ![](Module01_files/figure-html/unnamed-chunk-12-1.png)<!-- -->
 
 ####Create a boxplot
+[Link to video demonstration](https://drive.google.com/file/d/0B57yktAdJPDkMEoza1FKdy1McnM/view?usp=sharing)
 
 We can use the R function `boxplot()` to create a boxplot of the salary variable in the MLB data set.
 
