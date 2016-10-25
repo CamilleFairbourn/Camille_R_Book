@@ -18,7 +18,7 @@ require(openintro)
 require(MASS)
 ```
 
-We're going to look at the male data set, a sample of 250 adult men's recorded height in centimeters.
+We're going to look at the male data set, a sample of 250 adult men's recorded height in centimeters. This is a subset of the data included with the NHANES package.
 
 First, we read in the dataset.
 ```{r}
