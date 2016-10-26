@@ -1,4 +1,4 @@
-# Camille's R Book
+# USU STAT 2300 Module 3
 Camille Fairbourn  
 #Module 3 Discrete Random Variables
 

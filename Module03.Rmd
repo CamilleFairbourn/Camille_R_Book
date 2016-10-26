@@ -1,5 +1,5 @@
 ---
-title: "Camille's R Book"
+title: "USU STAT 2300 Module 3"
 author: "Camille Fairbourn"
 output:
       html_document:
