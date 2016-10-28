@@ -19,7 +19,7 @@ The U.S. Department of Education hosts a [website](https://collegescorecard.ed.g
 First, we read in the dataset and construct a density histogram of the average yearly cost of attendance. We will also calculate and plot a vertical line at the mean of this variable.
 
 ```r
-collegecost<-read.csv("http://www.math.usu.edu/cfairbourn/Stat2300/RStudioFiles/data/collegecost.csv")
+collegecost <- read.csv("http://www.math.usu.edu/cfairbourn/Stat2300/RStudioFiles/data/collegecost.csv")
 
 hist(collegecost$yearly,
      main = "Public Universities in the United States, 2013",
@@ -42,13 +42,13 @@ Let's take a simple random sample of 5 of these universities and store the resul
 
 
 ```r
-x<-sample(collegecost$yearly, 5)
+x <- sample(collegecost$yearly, 5)
 #look at the numbers in this sample and calculate the mean
 x #data for this sample
 ```
 
 ```
-## [1] 15313 20762 18466 19511 16107
+## [1] 15342 22420 14906 20404 20601
 ```
 
 ```r
@@ -56,20 +56,31 @@ mean(x) #this sample mean
 ```
 
 ```
-## [1] 18031.8
+## [1] 18734.6
 ```
 
+Run the code below 3 more times and make note of the mean of each sample
+
+
 ```r
-#Now take a simple random sample of 20 of these trucks and
-#store the results in a vector called x.
-x<-sample(collegecost$yearly, 20)
-#look at the numbers in this sample and calculate the mean
+x <- sample(collegecost$yearly, 5)
+x
+mean(x)
+```
+
+**Increase the sample size to n = 20**
+
+Let's repeat this for a larger sample size. Make note of the mean of each sample.
+
+
+```r
+x <- sample(collegecost$yearly, 20)
 x #data for this sample
 ```
 
 ```
-##  [1] 18088 17578 12946 17742 21203 17738 22273 14858 17873 22311 23673
-## [12] 27781 25786 20916 26970 19105 18054 19192 17758 31803
+##  [1] 14041 30637 17742 16434 17290 28980 21385 18085 24614 18077 15218
+## [12] 18822 17125 22796 18165 14034 16663 17440 19212 18158
 ```
 
 ```r
@@ -77,27 +88,34 @@ mean(x) #this sample mean
 ```
 
 ```
-## [1] 20682.4
+## [1] 19245.9
 ```
 
-```r
-#Re-run lines 34 through 37 three times and record your sample 
-#mean each time on the worksheet. Mark each sample mean on 
-#your histogram.
+Run the code below 3 more times and make note of the mean of each sample
 
-#Now take a simple random sample of 50 of these trucks and
-#store the results in a vector called x.
-x<-sample(collegecost$yearly, 50)
-#look at the numbers in this sample and calculate the mean
+
+```r
+x <- sample(collegecost$yearly, 20)
+x
+mean(x)
+```
+
+**Increase the sample size to n = 50**
+
+Repeat once more for an even larger sample size. Again, make a note of the mean of each sample.
+
+
+```r
+x <- sample(collegecost$yearly, 50)
 x #data for this sample
 ```
 
 ```
-##  [1] 20449 20234 23995 18192 20531 15207 22041 17892 20282 19402 21980
-## [12] 20762 20899 15753 17578 18285 20846 20799 16782 18466 19843 25248
-## [23] 16707 17290 15402 24278 20386 30637 17093 19511 19873 21960 29751
-## [34] 19900 16397 19048 19990 22861 22332 23685 24746 16377 13180 19761
-## [45] 19468 17709 19965 20372 17029 18628
+##  [1] 23113 19990 19117 14764 20899 21990 19402 20958 15207 20025 17759
+## [12] 22570 15531 23905 18781 17782 17093 21960 21526 19145 21823 14041
+## [23] 25799 16107  7715 16556 20282 17377 25384 15218 18387 17873 18547
+## [34] 21004 24997 23043 13531 20676 21513 24835 13967 13222 17780 16605
+## [45] 18085 22771 31474 16877 32715 15334
 ```
 
 ```r
@@ -105,5 +123,137 @@ mean(x) #this sample mean
 ```
 
 ```
-## [1] 19996.04
+## [1] 19501.1
 ```
+
+Run the code below 3 more times and make note of the mean of each sample
+
+
+```r
+x <- sample(collegecost$yearly, 50)
+x
+mean(x)
+```
+
+Now we're going to have R take 500 samples of n=5 universities and record the mean of each sample.
+
+Specify the sample size, n
+
+```r
+n <- 5
+#Create a vector to store the sample means and draw the samples
+xbar = rep(0,500)
+for(i in 1:500) {xbar[i] = mean(sample(collegecost$yearly, n))}
+
+#Calculate the mean of the 500 sample means and compare it to 
+#the population mean
+mean(xbar) #the mean of the sample means
+```
+
+```
+## [1] 19811.54
+```
+
+```r
+mean(collegecost$yearly) #the population mean
+```
+
+```
+## [1] 19719.76
+```
+
+```r
+#Create a histogram of the 500 sample means 
+#with a line at the population mean
+hist(xbar, 
+     prob = TRUE, 
+     breaks=12, 
+     xlim = c(5000, 35000),
+     main="Sample Means",
+     xlab="Mean")
+legend("topright",c("n=",n))
+abline(v=mean(collegecost$yearly), col="red", lwd=2)
+```
+
+![](Module04-2_files/figure-html/unnamed-chunk-9-1.png)<!-- -->
+
+```r
+#Compare the sample means histogram to the data histogram. 
+#What do they have in common? How are they different?
+
+#Let's change the sample size to n=20 and repeat.
+n<-20
+#Create a vector to store the sample means and draw the samples
+xbar=rep(0,500)
+for(i in 1:500) {xbar[i]=mean(sample(collegecost$yearly, n))}
+
+#Calculate the mean of the 500 sample means and compare it to 
+#the population mean
+mean(xbar) #the mean of the sample means
+```
+
+```
+## [1] 19733.53
+```
+
+```r
+mean(collegecost$yearly) #the population mean
+```
+
+```
+## [1] 19719.76
+```
+
+```r
+#Create a histogram of the 500 sample means 
+#with a line at the population mean
+hist(xbar, 
+     prob = TRUE, 
+     breaks=12, 
+     xlim = c(5000, 35000),
+     main="Sample Means",
+     xlab="Mean")
+legend("topright",c("n=",n))
+abline(v=mean(collegecost$yearly), col="red", lwd=2)
+```
+
+![](Module04-2_files/figure-html/unnamed-chunk-9-2.png)<!-- -->
+
+```r
+#Now change the sample size to n=50 and repeat.
+n<-50
+#Create a vector to store the sample means and draw the samples
+xbar=rep(0,500)
+for(i in 1:500) {xbar[i]=mean(sample(collegecost$yearly, n))}
+
+#Calculate the mean of the 500 sample means and compare it to 
+#the population mean
+mean(xbar) #the mean of the sample means
+```
+
+```
+## [1] 19714.87
+```
+
+```r
+mean(collegecost$yearly) #the population mean
+```
+
+```
+## [1] 19719.76
+```
+
+```r
+#Create a histogram of the 500 sample means 
+#with a line at the population mean
+hist(xbar, 
+     prob = TRUE, 
+     breaks=12, 
+     xlim = c(5000, 35000),
+     main="Sample Means",
+     xlab="Mean")
+legend("topright",c("n=",n))
+abline(v=mean(collegecost$yearly), col="red", lwd=2)
+```
+
+![](Module04-2_files/figure-html/unnamed-chunk-9-3.png)<!-- -->

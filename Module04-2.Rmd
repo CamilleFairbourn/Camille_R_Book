@@ -22,7 +22,7 @@ The U.S. Department of Education hosts a [website](https://collegescorecard.ed.g
 
 First, we read in the dataset and construct a density histogram of the average yearly cost of attendance. We will also calculate and plot a vertical line at the mean of this variable.
 ```{r}
-collegecost<-read.csv("http://www.math.usu.edu/cfairbourn/Stat2300/RStudioFiles/data/collegecost.csv")
+collegecost <- read.csv("http://www.math.usu.edu/cfairbourn/Stat2300/RStudioFiles/data/collegecost.csv")
 
 hist(collegecost$yearly,
      main = "Public Universities in the United States, 2013",
@@ -35,28 +35,124 @@ mean(collegecost$yearly)
 Let's take a simple random sample of 5 of these universities and store the results in a vector called x. We will also calculate the mean for the sample.
 
 ```{r}
-x<-sample(collegecost$yearly, 5)
-#look at the numbers in this sample and calculate the mean
-x #data for this sample
-mean(x) #this sample mean
-
-
-
-#Now take a simple random sample of 20 of these trucks and
-#store the results in a vector called x.
-x<-sample(collegecost$yearly, 20)
-#look at the numbers in this sample and calculate the mean
-x #data for this sample
-mean(x) #this sample mean
-
-#Re-run lines 34 through 37 three times and record your sample 
-#mean each time on the worksheet. Mark each sample mean on 
-#your histogram.
-
-#Now take a simple random sample of 50 of these trucks and
-#store the results in a vector called x.
-x<-sample(collegecost$yearly, 50)
+x <- sample(collegecost$yearly, 5)
 #look at the numbers in this sample and calculate the mean
 x #data for this sample
 mean(x) #this sample mean
 ```
+
+Run the code below 3 more times and make note of the mean of each sample
+
+```{r eval = FALSE}
+x <- sample(collegecost$yearly, 5)
+x
+mean(x)
+``` 
+
+**Increase the sample size to n = 20**
+
+Let's repeat this for a larger sample size. Make note of the mean of each sample.
+
+```{r}
+x <- sample(collegecost$yearly, 20)
+x #data for this sample
+mean(x) #this sample mean
+```
+
+Run the code below 3 more times and make note of the mean of each sample
+
+```{r eval = FALSE}
+x <- sample(collegecost$yearly, 20)
+x
+mean(x)
+``` 
+
+**Increase the sample size to n = 50**
+
+Repeat once more for an even larger sample size. Again, make a note of the mean of each sample.
+
+```{r}
+x <- sample(collegecost$yearly, 50)
+x #data for this sample
+mean(x) #this sample mean
+```
+
+Run the code below 3 more times and make note of the mean of each sample
+
+```{r eval = FALSE}
+x <- sample(collegecost$yearly, 50)
+x
+mean(x)
+``` 
+
+Now we're going to have R take 500 samples of n=5 universities and record the mean of each sample.
+
+Specify the sample size, n
+```{r}
+n <- 5
+#Create a vector to store the sample means and draw the samples
+xbar = rep(0,500)
+for(i in 1:500) {xbar[i] = mean(sample(collegecost$yearly, n))}
+
+#Calculate the mean of the 500 sample means and compare it to 
+#the population mean
+mean(xbar) #the mean of the sample means
+mean(collegecost$yearly) #the population mean
+
+#Create a histogram of the 500 sample means 
+#with a line at the population mean
+hist(xbar, 
+     prob = TRUE, 
+     breaks=12, 
+     xlim = c(5000, 35000),
+     main="Sample Means",
+     xlab="Mean")
+legend("topright",c("n=",n))
+abline(v=mean(collegecost$yearly), col="red", lwd=2)
+
+#Compare the sample means histogram to the data histogram. 
+#What do they have in common? How are they different?
+
+#Let's change the sample size to n=20 and repeat.
+n<-20
+#Create a vector to store the sample means and draw the samples
+xbar=rep(0,500)
+for(i in 1:500) {xbar[i]=mean(sample(collegecost$yearly, n))}
+
+#Calculate the mean of the 500 sample means and compare it to 
+#the population mean
+mean(xbar) #the mean of the sample means
+mean(collegecost$yearly) #the population mean
+
+#Create a histogram of the 500 sample means 
+#with a line at the population mean
+hist(xbar, 
+     prob = TRUE, 
+     breaks=12, 
+     xlim = c(5000, 35000),
+     main="Sample Means",
+     xlab="Mean")
+legend("topright",c("n=",n))
+abline(v=mean(collegecost$yearly), col="red", lwd=2)
+
+#Now change the sample size to n=50 and repeat.
+n<-50
+#Create a vector to store the sample means and draw the samples
+xbar=rep(0,500)
+for(i in 1:500) {xbar[i]=mean(sample(collegecost$yearly, n))}
+
+#Calculate the mean of the 500 sample means and compare it to 
+#the population mean
+mean(xbar) #the mean of the sample means
+mean(collegecost$yearly) #the population mean
+
+#Create a histogram of the 500 sample means 
+#with a line at the population mean
+hist(xbar, 
+     prob = TRUE, 
+     breaks=12, 
+     xlim = c(5000, 35000),
+     main="Sample Means",
+     xlab="Mean")
+legend("topright",c("n=",n))
+abline(v=mean(collegecost$yearly), col="red", lwd=2)
