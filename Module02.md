@@ -1,4 +1,4 @@
-# Camille's R Book
+# USU STAT 2300 Module 2
 Camille Fairbourn  
 #Module 2 Probability
 
@@ -16,7 +16,7 @@ In Module 2 we talk about nominal variables and create contingency tables to org
 First, we'll read in the flightNYC dataset. This is a subset of the data available in the nycflights13 package.
 
 ```r
-flightNYC <- read.csv("C:/Users/Owner/Dropbox/Work/TheRFolder/Datasets/16-Fall/flightNYC.csv")
+flightNYC <- read.csv("http://www.math.usu.edu/cfairbourn/Stat2300/RStudioFiles/data/flightNYC.csv")
 ```
 
 Use the `View()` function to look at the variables in the dataset. This data measures 6 different variables on a sample of 600 flights from the JFK and LaGuardia (LGA) airports in New York City during 2013. Three of these variables are nominal and three are interval.
