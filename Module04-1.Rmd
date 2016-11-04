@@ -1,9 +1,5 @@
 ---
-<<<<<<< HEAD
-title: USU STAT 2300 Module 4-1"
-=======
 title: "USU STAT 2300 Module 4.1"
->>>>>>> df98be296b31b1c2647f0308cbb87b6b8153525d
 author: "Camille Fairbourn"
 output:
       html_document:

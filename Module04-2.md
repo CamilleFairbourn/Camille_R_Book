@@ -48,7 +48,7 @@ x #data for this sample
 ```
 
 ```
-## [1] 15342 22420 14906 20404 20601
+## [1] 18875 15395 18165 19058 22550
 ```
 
 ```r
@@ -56,7 +56,7 @@ mean(x) #this sample mean
 ```
 
 ```
-## [1] 18734.6
+## [1] 18808.6
 ```
 
 Run the code below 3 more times and make note of the mean of each sample
@@ -79,8 +79,8 @@ x #data for this sample
 ```
 
 ```
-##  [1] 14041 30637 17742 16434 17290 28980 21385 18085 24614 18077 15218
-## [12] 18822 17125 22796 18165 14034 16663 17440 19212 18158
+##  [1] 16663 13903 19402 13296 13188 15272 16903 15784 29174 15704 20774
+## [12] 19900 18227 20819 19303 14906 15612 17380 18781 20796
 ```
 
 ```r
@@ -88,7 +88,7 @@ mean(x) #this sample mean
 ```
 
 ```
-## [1] 19245.9
+## [1] 17789.35
 ```
 
 Run the code below 3 more times and make note of the mean of each sample
@@ -111,11 +111,11 @@ x #data for this sample
 ```
 
 ```
-##  [1] 23113 19990 19117 14764 20899 21990 19402 20958 15207 20025 17759
-## [12] 22570 15531 23905 18781 17782 17093 21960 21526 19145 21823 14041
-## [23] 25799 16107  7715 16556 20282 17377 25384 15218 18387 17873 18547
-## [34] 21004 24997 23043 13531 20676 21513 24835 13967 13222 17780 16605
-## [45] 18085 22771 31474 16877 32715 15334
+##  [1] 16935 22497 17780 21263 20819 20846 25441 21832 24827 17600 21004
+## [12] 18066 16878 17290 20774 18054 23995 13065 28564 23113 16361 21980
+## [23] 26086 25255 21420 22046 20371 17805 21498 22633 25665 17892 22926
+## [34] 22381 19198 13188 22009 21971 15784 28980 18285 16525 21526 21523
+## [45] 12957 26717 33208 23081 18097 18936
 ```
 
 ```r
@@ -123,7 +123,7 @@ mean(x) #this sample mean
 ```
 
 ```
-## [1] 19501.1
+## [1] 20938.94
 ```
 
 Run the code below 3 more times and make note of the mean of each sample
@@ -135,23 +135,61 @@ x
 mean(x)
 ```
 
-Now we're going to have R take 500 samples of n=5 universities and record the mean of each sample.
+**Now we're going to have R take 500 samples of n = 5 universities and record the mean of each sample.**
 
-Specify the sample size, n
+Specify the sample size, n. Then create a vector to store the sample means and draw the samples.
 
 ```r
 n <- 5
-#Create a vector to store the sample means and draw the samples
+xbar = rep(0,500)
+for(i in 1:500) {xbar[i] = mean(sample(collegecost$yearly, n))}
+```
+
+Calculate the mean of the 500 sample means and compare it to the population mean, then create a histogram of the 500 sample means with a line at the population mean.
+
+```r
+mean(xbar) #the mean of the sample means
+```
+
+```
+## [1] 19794.39
+```
+
+```r
+mean(collegecost$yearly) #the population mean
+```
+
+```
+## [1] 19719.76
+```
+
+```r
+hist(xbar, 
+     prob = TRUE, 
+     breaks = 12, 
+     xlim = c(5000, 35000),
+     main = "Sample Means",
+     xlab = "Mean")
+legend("topright",c("n = ",n))
+abline(v = mean(collegecost$yearly), col = "red", lwd = 2)
+```
+
+![](Module04-2_files/figure-html/unnamed-chunk-10-1.png)<!-- -->
+
+Compare the sample means histogram to the data histogram. What do they have in common? How are they different?
+
+**Let's change the sample size to n = 20 and repeat.**
+
+```r
+n<-20
 xbar = rep(0,500)
 for(i in 1:500) {xbar[i] = mean(sample(collegecost$yearly, n))}
 
-#Calculate the mean of the 500 sample means and compare it to 
-#the population mean
 mean(xbar) #the mean of the sample means
 ```
 
 ```
-## [1] 19811.54
+## [1] 19649.12
 ```
 
 ```r
@@ -163,37 +201,30 @@ mean(collegecost$yearly) #the population mean
 ```
 
 ```r
-#Create a histogram of the 500 sample means 
-#with a line at the population mean
 hist(xbar, 
      prob = TRUE, 
-     breaks=12, 
+     breaks = 12, 
      xlim = c(5000, 35000),
-     main="Sample Means",
-     xlab="Mean")
-legend("topright",c("n=",n))
-abline(v=mean(collegecost$yearly), col="red", lwd=2)
+     main = "Sample Means",
+     xlab = "Mean")
+legend("topright",c("n = ",n))
+abline(v = mean(collegecost$yearly), col = "red", lwd = 2)
 ```
 
-![](Module04-2_files/figure-html/unnamed-chunk-9-1.png)<!-- -->
+![](Module04-2_files/figure-html/unnamed-chunk-11-1.png)<!-- -->
+
+**Finally, let's change the sample size to n = 50 and repeat one last time.**
 
 ```r
-#Compare the sample means histogram to the data histogram. 
-#What do they have in common? How are they different?
+n <- 50
+xbar = rep(0,500)
+for(i in 1:500) {xbar[i] = mean(sample(collegecost$yearly, n))}
 
-#Let's change the sample size to n=20 and repeat.
-n<-20
-#Create a vector to store the sample means and draw the samples
-xbar=rep(0,500)
-for(i in 1:500) {xbar[i]=mean(sample(collegecost$yearly, n))}
-
-#Calculate the mean of the 500 sample means and compare it to 
-#the population mean
 mean(xbar) #the mean of the sample means
 ```
 
 ```
-## [1] 19733.53
+## [1] 19748.83
 ```
 
 ```r
@@ -205,55 +236,14 @@ mean(collegecost$yearly) #the population mean
 ```
 
 ```r
-#Create a histogram of the 500 sample means 
-#with a line at the population mean
 hist(xbar, 
      prob = TRUE, 
-     breaks=12, 
+     breaks = 12, 
      xlim = c(5000, 35000),
-     main="Sample Means",
-     xlab="Mean")
-legend("topright",c("n=",n))
-abline(v=mean(collegecost$yearly), col="red", lwd=2)
+     main = "Sample Means",
+     xlab = "Mean")
+legend("topright",c("n = ",n))
+abline(v = mean(collegecost$yearly), col = "red", lwd = 2)
 ```
 
-![](Module04-2_files/figure-html/unnamed-chunk-9-2.png)<!-- -->
-
-```r
-#Now change the sample size to n=50 and repeat.
-n<-50
-#Create a vector to store the sample means and draw the samples
-xbar=rep(0,500)
-for(i in 1:500) {xbar[i]=mean(sample(collegecost$yearly, n))}
-
-#Calculate the mean of the 500 sample means and compare it to 
-#the population mean
-mean(xbar) #the mean of the sample means
-```
-
-```
-## [1] 19714.87
-```
-
-```r
-mean(collegecost$yearly) #the population mean
-```
-
-```
-## [1] 19719.76
-```
-
-```r
-#Create a histogram of the 500 sample means 
-#with a line at the population mean
-hist(xbar, 
-     prob = TRUE, 
-     breaks=12, 
-     xlim = c(5000, 35000),
-     main="Sample Means",
-     xlab="Mean")
-legend("topright",c("n=",n))
-abline(v=mean(collegecost$yearly), col="red", lwd=2)
-```
-
-![](Module04-2_files/figure-html/unnamed-chunk-9-3.png)<!-- -->
+![](Module04-2_files/figure-html/unnamed-chunk-12-1.png)<!-- -->

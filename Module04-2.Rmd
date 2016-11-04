@@ -85,74 +85,66 @@ x
 mean(x)
 ``` 
 
-Now we're going to have R take 500 samples of n=5 universities and record the mean of each sample.
+**Now we're going to have R take 500 samples of n = 5 universities and record the mean of each sample.**
 
-Specify the sample size, n
+Specify the sample size, n. Then create a vector to store the sample means and draw the samples.
 ```{r}
 n <- 5
-#Create a vector to store the sample means and draw the samples
+xbar = rep(0,500)
+for(i in 1:500) {xbar[i] = mean(sample(collegecost$yearly, n))}
+```
+
+Calculate the mean of the 500 sample means and compare it to the population mean, then create a histogram of the 500 sample means with a line at the population mean.
+```{r}
+mean(xbar) #the mean of the sample means
+mean(collegecost$yearly) #the population mean
+
+hist(xbar, 
+     prob = TRUE, 
+     breaks = 12, 
+     xlim = c(5000, 35000),
+     main = "Sample Means",
+     xlab = "Mean")
+legend("topright",c("n = ",n))
+abline(v = mean(collegecost$yearly), col = "red", lwd = 2)
+```
+
+Compare the sample means histogram to the data histogram. What do they have in common? How are they different?
+
+**Let's change the sample size to n = 20 and repeat.**
+```{r}
+n<-20
 xbar = rep(0,500)
 for(i in 1:500) {xbar[i] = mean(sample(collegecost$yearly, n))}
 
-#Calculate the mean of the 500 sample means and compare it to 
-#the population mean
 mean(xbar) #the mean of the sample means
 mean(collegecost$yearly) #the population mean
 
-#Create a histogram of the 500 sample means 
-#with a line at the population mean
 hist(xbar, 
      prob = TRUE, 
-     breaks=12, 
+     breaks = 12, 
      xlim = c(5000, 35000),
-     main="Sample Means",
-     xlab="Mean")
-legend("topright",c("n=",n))
-abline(v=mean(collegecost$yearly), col="red", lwd=2)
+     main = "Sample Means",
+     xlab = "Mean")
+legend("topright",c("n = ",n))
+abline(v = mean(collegecost$yearly), col = "red", lwd = 2)
+```
 
-#Compare the sample means histogram to the data histogram. 
-#What do they have in common? How are they different?
+**Finally, let's change the sample size to n = 50 and repeat one last time.**
+```{r}
+n <- 50
+xbar = rep(0,500)
+for(i in 1:500) {xbar[i] = mean(sample(collegecost$yearly, n))}
 
-#Let's change the sample size to n=20 and repeat.
-n<-20
-#Create a vector to store the sample means and draw the samples
-xbar=rep(0,500)
-for(i in 1:500) {xbar[i]=mean(sample(collegecost$yearly, n))}
-
-#Calculate the mean of the 500 sample means and compare it to 
-#the population mean
 mean(xbar) #the mean of the sample means
 mean(collegecost$yearly) #the population mean
 
-#Create a histogram of the 500 sample means 
-#with a line at the population mean
 hist(xbar, 
      prob = TRUE, 
-     breaks=12, 
+     breaks = 12, 
      xlim = c(5000, 35000),
-     main="Sample Means",
-     xlab="Mean")
-legend("topright",c("n=",n))
-abline(v=mean(collegecost$yearly), col="red", lwd=2)
-
-#Now change the sample size to n=50 and repeat.
-n<-50
-#Create a vector to store the sample means and draw the samples
-xbar=rep(0,500)
-for(i in 1:500) {xbar[i]=mean(sample(collegecost$yearly, n))}
-
-#Calculate the mean of the 500 sample means and compare it to 
-#the population mean
-mean(xbar) #the mean of the sample means
-mean(collegecost$yearly) #the population mean
-
-#Create a histogram of the 500 sample means 
-#with a line at the population mean
-hist(xbar, 
-     prob = TRUE, 
-     breaks=12, 
-     xlim = c(5000, 35000),
-     main="Sample Means",
-     xlab="Mean")
-legend("topright",c("n=",n))
-abline(v=mean(collegecost$yearly), col="red", lwd=2)
+     main = "Sample Means",
+     xlab = "Mean")
+legend("topright",c("n = ",n))
+abline(v = mean(collegecost$yearly), col = "red", lwd = 2)
+```
