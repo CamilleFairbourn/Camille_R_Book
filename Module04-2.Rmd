@@ -103,9 +103,8 @@ hist(xbar,
      prob = TRUE, 
      breaks = 12, 
      xlim = c(5000, 35000),
-     main = "Sample Means",
+     main = paste("Sample Means with n = ", n),
      xlab = "Mean")
-legend("topright",c("n = ",n))
 abline(v = mean(collegecost$yearly), col = "red", lwd = 2)
 ```
 
@@ -124,9 +123,8 @@ hist(xbar,
      prob = TRUE, 
      breaks = 12, 
      xlim = c(5000, 35000),
-     main = "Sample Means",
+     main = paste("Sample Means with n = ", n),
      xlab = "Mean")
-legend("topright",c("n = ",n))
 abline(v = mean(collegecost$yearly), col = "red", lwd = 2)
 ```
 
@@ -143,8 +141,7 @@ hist(xbar,
      prob = TRUE, 
      breaks = 12, 
      xlim = c(5000, 35000),
-     main = "Sample Means",
+     main = paste("Sample Means with n = ", n),
      xlab = "Mean")
-legend("topright",c("n = ",n))
 abline(v = mean(collegecost$yearly), col = "red", lwd = 2)
 ```

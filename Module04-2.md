@@ -48,7 +48,7 @@ x #data for this sample
 ```
 
 ```
-## [1] 23905 19380 15058 18042 22332
+## [1] 16782 19755 26970 29520 18028
 ```
 
 ```r
@@ -56,7 +56,7 @@ mean(x) #this sample mean
 ```
 
 ```
-## [1] 19743.4
+## [1] 22211
 ```
 
 Run the code below 3 more times and make note of the mean of each sample
@@ -79,8 +79,8 @@ x #data for this sample
 ```
 
 ```
-##  [1] 25799 19048 15242 22483 22936 19511 13713 19611 32715 25931 17749
-## [12] 16227 21966 19917 16877 17839 22796 24997 24835  7715
+##  [1] 16107 13204 21222 23130 18479 23675 20511 19202 18581 25416 19829
+## [12] 22387 19299 16126 23995 21420 20404 16427 22041 19178
 ```
 
 ```r
@@ -88,7 +88,7 @@ mean(x) #this sample mean
 ```
 
 ```
-## [1] 20395.35
+## [1] 20031.65
 ```
 
 Run the code below 3 more times and make note of the mean of each sample
@@ -111,11 +111,11 @@ x #data for this sample
 ```
 
 ```
-##  [1] 16427 25086 24696 13204 15112 12946 19462 19843 21432 15611 23707
-## [12] 19415 21160 22267 20449 18724 21004 21601 15272 16345 28011 18227
-## [23] 29787 15066 17767 19851 17350 15021  7715 13308 18406 21222 22420
-## [34] 19192 22909 20252 19058 31474 20372 17959 30858 17553 15753 15935
-## [45] 15218 13531 25513 16878 15002 15531
+##  [1] 19873 19048 17896 20916 21402 13756 20538 16020 25291 16071 19917
+## [12] 21922 24375 16877 24746 21748 18028 17749 20372 23763 20630 20799
+## [23] 23740 13735 19366 23263 13713 28943 13296 18033 21160 31803 21512
+## [34] 17805 20840 21732 14925 19058 21971 21203 21990 16556 13026 19212
+## [45] 19843 19145 27247 22974 17377 21401
 ```
 
 ```r
@@ -123,7 +123,7 @@ mean(x) #this sample mean
 ```
 
 ```
-## [1] 19218.04
+## [1] 20132.12
 ```
 
 Run the code below 3 more times and make note of the mean of each sample
@@ -152,7 +152,7 @@ mean(xbar) #the mean of the sample means
 ```
 
 ```
-## [1] 19767.86
+## [1] 19824.16
 ```
 
 ```r
@@ -168,9 +168,8 @@ hist(xbar,
      prob = TRUE, 
      breaks = 12, 
      xlim = c(5000, 35000),
-     main = "Sample Means",
+     main = paste("Sample Means with n = ", n),
      xlab = "Mean")
-legend("topright",c("n = ",n))
 abline(v = mean(collegecost$yearly), col = "red", lwd = 2)
 ```
 
@@ -189,7 +188,7 @@ mean(xbar) #the mean of the sample means
 ```
 
 ```
-## [1] 19832.4
+## [1] 19635.93
 ```
 
 ```r
@@ -205,9 +204,8 @@ hist(xbar,
      prob = TRUE, 
      breaks = 12, 
      xlim = c(5000, 35000),
-     main = "Sample Means",
+     main = paste("Sample Means with n = ", n),
      xlab = "Mean")
-legend("topright",c("n = ",n))
 abline(v = mean(collegecost$yearly), col = "red", lwd = 2)
 ```
 
@@ -224,7 +222,7 @@ mean(xbar) #the mean of the sample means
 ```
 
 ```
-## [1] 19689.06
+## [1] 19732.97
 ```
 
 ```r
@@ -240,9 +238,8 @@ hist(xbar,
      prob = TRUE, 
      breaks = 12, 
      xlim = c(5000, 35000),
-     main = "Sample Means",
+     main = paste("Sample Means with n = ", n),
      xlab = "Mean")
-legend("topright",c("n = ",n))
 abline(v = mean(collegecost$yearly), col = "red", lwd = 2)
 ```
 
