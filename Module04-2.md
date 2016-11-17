@@ -49,7 +49,7 @@ x #data for this sample
 ```
 
 ```
-## [1] 20330 17742 17576 15611 21862
+## [1] 24827 15272 20762 26651 14478
 ```
 
 ```r
@@ -57,10 +57,10 @@ mean(x) #this sample mean
 ```
 
 ```
-## [1] 18624.2
+## [1] 20398
 ```
 
-Run the code below 3 more times and make note of the mean of each sample. Then calculate the average of your sample means and compare the result to the true mean of 1.971976\times 10^{4}. 
+Run the code below 3 more times and make note of the mean of each sample. Then calculate the average of your sample means and compare the result to the true mean of 19719.76. 
 
 
 ```r
@@ -80,8 +80,8 @@ x #data for this sample
 ```
 
 ```
-##  [1] 20422 18809 20799 17478 14034 14710 13735 18837 17290 27759 18936
-## [12] 18466 23685 20269 15414 22461 23124 19831 15272 17125
+##  [1] 22861 20140 18061 15414  8020 21628 14823 17873 22102 22461 22009
+## [12] 22933 17892 22273 22185 25416 19202 23763 15066 17400
 ```
 
 ```r
@@ -89,10 +89,10 @@ mean(x) #this sample mean
 ```
 
 ```
-## [1] 18922.8
+## [1] 19576.1
 ```
 
-Run the code below 3 more times and make note of the mean of each sample. Then calculate the average of your sample means and compare the result to the true mean of 1.971976\times 10^{4}. 
+Run the code below 3 more times and make note of the mean of each sample. Then calculate the average of your sample means and compare the result to the true mean of 19719.76. 
 
 
 ```r
@@ -112,11 +112,11 @@ x #data for this sample
 ```
 
 ```
-##  [1] 20762 21823 17487 21222 18822 16663 13735 14292 16071 19446 15612
-## [12] 20881 22420 19917 20774 22550 22926 15121 18077 19829 15272 17576
-## [23] 20025 22974 22771 16361 19571 20478 20282 21990 25416 23740 21980
-## [34] 24375 15002 19202 17896 23905 19831 10889 14478 18875 13676 12957
-## [45] 20075 24234 18837 22273 19549 21433
+##  [1] 16753 18781 18852 25265 19851 20199 16935 18486 14846 16020 21338
+## [12] 18628 11601 16227 31913 17749 23685 20531 16212 16107 19801 14050
+## [23] 18054 22048 30858 17996 25291 17501 13028 14852 15395 22474 15121
+## [34] 25786 22933 26651 15272 25799 20916 23718 25938 27759 19303 18875
+## [45] 21493 20630 16860 20840 19299 17334
 ```
 
 ```r
@@ -124,10 +124,10 @@ mean(x) #this sample mean
 ```
 
 ```
-## [1] 19287.06
+## [1] 19917.08
 ```
 
-Run the code below 3 more times and make note of the mean of each sample. Once more, calculate the average of your sample means and compare the result to the true mean of 1.971976\times 10^{4}. 
+Run the code below 3 more times and make note of the mean of each sample. Once more, calculate the average of your sample means and compare the result to the true mean of 19719.76. 
 
 
 ```r
@@ -155,7 +155,7 @@ mean(xbar) #the mean of the sample means
 ```
 
 ```
-## [1] 19806.06
+## [1] 19741.92
 ```
 
 ```r
@@ -191,7 +191,7 @@ mean(xbar) #the mean of the sample means
 ```
 
 ```
-## [1] 19659.84
+## [1] 19807.03
 ```
 
 ```r
@@ -225,7 +225,7 @@ mean(xbar) #the mean of the sample means
 ```
 
 ```
-## [1] 19714.03
+## [1] 19739.63
 ```
 
 ```r

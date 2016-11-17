@@ -43,7 +43,7 @@ x #data for this sample
 mean(x) #this sample mean
 ```
 
-Run the code below 3 more times and make note of the mean of each sample. Then calculate the average of your sample means and compare the result to the true mean of `r datamean`. 
+Run the code below 3 more times and make note of the mean of each sample. Then calculate the average of your sample means and compare the result to the true mean of `r format(datamean, nsmall = 2)`. 
 
 ```{r eval = FALSE}
 x <- sample(collegecost$yearly, 5)
@@ -61,7 +61,7 @@ x #data for this sample
 mean(x) #this sample mean
 ```
 
-Run the code below 3 more times and make note of the mean of each sample. Then calculate the average of your sample means and compare the result to the true mean of `r datamean`. 
+Run the code below 3 more times and make note of the mean of each sample. Then calculate the average of your sample means and compare the result to the true mean of `r format(datamean, nsmall = 2)`. 
 
 ```{r eval = FALSE}
 x <- sample(collegecost$yearly, 20)
@@ -79,7 +79,7 @@ x #data for this sample
 mean(x) #this sample mean
 ```
 
-Run the code below 3 more times and make note of the mean of each sample. Once more, calculate the average of your sample means and compare the result to the true mean of `r datamean`. 
+Run the code below 3 more times and make note of the mean of each sample. Once more, calculate the average of your sample means and compare the result to the true mean of `r format(datamean, nsmall = 2)`. 
 
 ```{r eval = FALSE}
 x <- sample(collegecost$yearly, 50)
