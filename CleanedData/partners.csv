@@ -1,0 +1,189 @@
+partner_id,partner_name,status,rating,due_diligence_type,countries.iso_code,countries.region,countries.name,countries.location.geo.level,latitude,longitude,delinquency_rate,default_rate,total_amount_raised,raised_mil,loans_posted,start_date
+1,East Africa Beta,closed,0,Full,KE,Africa,Kenya,country,1,38,0,9.191729323,26600,0.0266,62,4/15/2005
+2,The Shurush Initiative,closed,0,Full,GZ,MidEast,Gaza,country,31.5,34.466667,0,57.15909091,4400,0.0044,15,2/15/2006
+3,Regional Economic Development Center (REDC Bulgaria),closed,0,Full,BG,EE,Bulgaria,country,43,25,0,14.45504087,36700,0.0367,44,2/15/2006
+4,Senegal Ecovillage Microfinance Fund (SEM),closed,0,Full,SN,Africa,Senegal,country,14,-14,0,5.129270922,352500,0.3525,350,2/15/2006
+5,Prisma Microfinance,closed,0,Full,NI,CentrA,Nicaragua,country,13,-85,0,0,399925,0.399925,1136,2/15/2006
+6,Women`s Economic Empowerment Consort (WEEC),closed,0,Full,KE,Africa,Kenya,country,1,38,0,38.0016942,472200,0.4722,2033,3/15/2006
+7,MIFEX,closed,0,Full,EC,SouthA,Ecuador,country,-2,-77.5,0,24.1378866,1396800,1.3968,2652,4/23/2006
+8,Life in Africa Foundation (LiA),closed,0,Full,KE,Africa,Kenya,country,1,38,0,0,37700,0.0377,135,4/18/2006
+9,KREDIT Ltd.,active,5,Full,KH,Asia,Cambodia,country,13,105,0.048422519,0.029181733,6882500,6.8825,8884,5/3/2006
+10,Youth Self Employment Foundation (YOSEFO),paused,2.5,Full,TZ,Africa,Tanzania,country,-6,35,100,0,704825,0.704825,995,4/24/2006
+11,Women's Initiative to Eradicate Poverty (WITEP),closed,0,Full,UG,Africa,Uganda,country,2,33,0,0,4500,0.0045,306,5/10/2006
+13,Adelante Foundation,closed,0,Full,HN,CentrA,Honduras,country,15,-86.5,0,0,1500,0.0015,3,7/24/2006
+15,South Pacific Business Development (SPBD),active,2.5,Full,WS,Asia,Samoa,country,-13.583333,-172.333333,0,0,3064175,3.064175,4944,8/1/2006
+16,Admic Nacional,closed,0,Full,MX,NorthA,Mexico,country,23,-102,0,0,1683000,1.683,3349,8/31/2006
+17,Microinvest,closed,0,Full,MD,EE,Moldova,country,47,29,92.2571205,0,370300,0.3703,294,10/27/2006
+18,Credituyo,active,3,Full,MX,NorthA,Mexico,country,23,-102,4.845556911,0.99026306,2451500,2.4515,3925,10/2/2006
+19,Kraban Support Foundation (KSF),closed,0,Full,GH,Africa,Ghana,country,8,-2,0,0,502200,0.5022,600,11/8/2006
+20,Lift Above Poverty Organization (LAPO),paused,4,Full,NG,Africa,Nigeria,country,10,8,0,0,4976700,4.9767,8593,11/3/2006
+21,Mikrofond EAD,closed,0,Full,BG,EE,Bulgaria,country,43,25,0,0,337600,0.3376,258,10/27/2006
+22,Microfund Togo,closed,0,Full,TG,Africa,Togo,country,8,1.166667,0,20.72144686,2388625,2.388625,3586,11/7/2006
+23,Hluvuku-Adsema,active,2.5,Full,MZ,Africa,Mozambique,country,-18.25,35,1.94419378,0,1017850,1.01785,1728,11/18/2006
+24,K-Met Savings and Credit Cooperative Ltd,paused,1,Full,KE,Africa,Kenya,country,1,38,0,0,361650,0.36165,913,11/14/2006
+25,Ebony Foundation (Eb-F),closed,0,Full,KE,Africa,Kenya,country,1,38,0,51.96255167,697975,0.697975,1666,11/13/2006
+26,"HOPE Ukraine/Nadiya, a partner of HOPE International",active,3,Full,UA,EE,Ukraine,country,49,32,0.548772474,0,3524775,3.524775,2909,12/17/2006
+27,People Microcredit Investment Bureau (PEMCI),closed,0,Full,KE,Africa,Kenya,country,1,38,0,19.74147916,111550,0.11155,493,12/14/2006
+30,Komak Credit Union,active,2.5,Full,AZ,Asia,Azerbaijan,country,40.5,47.5,0,0.073854318,3401025,3.401025,2241,12/9/2006
+31,Norwegian Microcredit LLC (Normicro),closed,0,Full,AZ,Asia,Azerbaijan,country,40.5,47.5,0,0,1149925,1.149925,1447,12/9/2006
+32,Supporting Enterprises for Economic Development (SEED Development Group),closed,0,Full,KE,Africa,Kenya,country,1,38,0,18.73239437,74550,0.07455,446,1/31/2007
+33,Rural Agency for Development (RAFODE),closed,0,Full,KE,Africa,Kenya,country,1,38,0,0,0,0,48,1/4/2007
+34,"Ariana Financial Services Joint Stock Company (AFS), a partner of Mercy Corps",closed,0,Full,AF,MidEast,Afghanistan,country,33,65,0,6.831599523,1885250,1.88525,2915,1/18/2007
+36,Action Now: Kenya (ANK),closed,0,Full,KE,Africa,Kenya,country,1,38,0,35.51742341,127300,0.1273,349,2/17/2007
+37,Share an Opportunity Microfinance Ltd. (SAO MFI),closed,0,Full,UG,Africa,Uganda,country,2,33,0,5.067775468,60125,0.060125,73,2/26/2007
+40,Grounded and Holistic Approach for People's Empowerment (GHAPE),active,1,Full,CM,Africa,Cameroon,country,6,12,0,0.401332676,434000,0.434,831,2/19/2007
+41,Mekong Plus,closed,0,Full,VN,Asia,Viet Nam,country,16.166667,107.833333,0,0,27775,0.027775,383,3/6/2007
+42,Credit Mongol LLC,active,3.5,Full,MN,Asia,Mongolia,country,46,105,0,0,1261200,1.2612,811,4/14/2010
+43,Family Business Partners/Ganesha (MBK),closed,0,Full,ID,Asia,Indonesia,country,-5,120,0,0,74925,0.074925,796,2/15/2007
+44,"Esperanza International Dominican Republic, a partner of HOPE International",active,2.5,Full,HT,NorthA,Haiti,country,19,-72.416667,3.375311346,0.22764854,4763675,4.763675,2441,2/20/2007
+45,HELP Africa,closed,0,Full,TG,Africa,Togo,country,8,1.166667,0,47.00223439,45650,0.04565,162,4/4/2007
+46,"HOPE DRC, a partner of HOPE International",active,1.5,Full,CD,Africa,The Democratic Republic of the Congo,country,0,25,4.709745197,0,1798025,1.798025,523,2/22/2007
+47,"MLF Microinvest, a partner of ACDI/VOCA",closed,0,Full,TJ,Asia,Tajikistan,country,39,71,0,0,2086650,2.08665,3200,3/6/2007
+48,IMPRO,active,3.5,Full,BO,SouthA,Bolivia,country,-17,-65,1.508908262,0,1733625,1.733625,3085,3/26/2007
+49,Urban Ministry,closed,0,Full,NG,Africa,Nigeria,country,10,8,0,0,4900,0.0049,6,4/19/2007
+50,Iraqi Al-Aman Center/Kirkuk,closed,0,Full,IQ,MidEast,Iraq,country,33,44,0,0,190200,0.1902,164,5/7/2007
+51,Alternativa Solidaria Chiapas (AlSol),closed,0,Full,MX,NorthA,Mexico,country,23,-102,0,0,429825,0.429825,503,5/21/2007
+52,ACODE Finance,closed,0,Full,TD,Africa,Chad,country,15,19,0,0,0,0,61,5/13/2007
+53,Afrique Emergence & Investissements (AE&I),closed,0,Full,CI,Africa,Cote D'Ivoire,country,8,-5,0,0,192575,0.192575,235,4/26/2007
+54,"Women's Trust, Inc.",closed,0,Full,GH,Africa,Ghana,country,8,-2,0,0,1500,0.0015,3,5/6/2007
+55,Friendship Bridge,pilot,2,Full,GT,CentrA,Guatemala,country,15.5,-90.25,0,0,490225,0.490225,280,5/7/2007
+56,Aqroinvest Credit Union,active,3,Full,AZ,Asia,Azerbaijan,country,40.5,47.5,0.958575874,0,3388425,3.388425,2580,5/8/2007
+57,"Salone Microfinance Trust (SMT), a partner of ChildFund International",active,3,Full,SL,Africa,Sierra Leone,country,8.5,-11.5,8.575372192,0,2603700,2.6037,3215,5/22/2007
+58,Fundación Paraguaya,active,4.5,Full,PY,SouthA,Paraguay,country,-22.993333,-57.996389,0.677569178,0,9515800,9.5158,6894,5/23/2007
+59,Pro Mujer Bolivia,active,4,Full,BO,SouthA,Bolivia,country,-17,-65,0.231405612,0,3598500,3.5985,1466,7/18/2007
+60,"Asasah, a partner of Save the Children",active,3,Full,PK,Asia,Pakistan,country,30,70,0,0,5185000,5.185,5663,8/2/2007
+61,"MAXIMA Mikroheranhvatho Co., Ltd.",active,3,Full,KH,Asia,Cambodia,country,13,105,0.217852297,0.053369012,3080000,3.08,4528,5/29/2007
+62,Patan Business and Professional Women,active,1.5,Full,NP,Asia,Nepal,country,28,84,0.562129402,0,296975,0.296975,1107,9/27/2007
+63,MLO Humo and Partners,active,4,Full,TJ,Asia,Tajikistan,country,39,71,0.167508061,0.002591088,3591200,3.5912,4353,6/5/2007
+64,"Fundo De Desenvolvimento Mulher (FDM), a partner of Save the Children",closed,0,Full,MZ,Africa,Mozambique,country,-18.25,35,0,0,112050,0.11205,296,8/2/2007
+65,BRAC Uganda,active,3.5,Full,UG,Africa,Uganda,country,2,33,0.828360763,0.007697439,3454575,3.454575,3802,12/22/2007
+66,"Fundación San Miguel Arcángel, Inc. (FSMA)",closed,0,Full,DO,NorthA,Dominican Republic,country,19,-70.666667,0,27.79589558,593750,0.59375,1672,6/20/2007
+67,TYM Fund,paused,4,Full,VN,Asia,Viet Nam,country,16.166667,107.833333,0,0,1591425,1.591425,2206,6/25/2007
+70,FINCA Peru,active,3.5,Full,PE,SouthA,Peru,country,-10,-76,0,0,4393725,4.393725,5664,7/24/2007
+71,Microfinanzas Prisma,active,3.5,Full,PE,SouthA,Peru,country,-10,-76,3.204080689,0.399879848,8194725,8.194725,15300,7/18/2007
+72,Manuela Ramos / CrediMUJER,active,3.5,Full,PE,SouthA,Peru,country,-10,-76,0.82183125,0.006218828,4157550,4.15755,8505,8/24/2007
+73,"Fundación AgroCapital, a partner of ACDI/VOCA",closed,0,Full,BO,SouthA,Bolivia,country,-17,-65,0,0,2955225,2.955225,1392,8/30/2007
+74,CEPRODEL,active,1,Full,NI,CentrA,Nicaragua,country,13,-85,11.27836183,0.304087061,2853250,2.85325,6011,10/9/2007
+76,ADEPHCA,paused,1,Full,NI,CentrA,Nicaragua,country,13,-85,100,25.00186185,169875,0.169875,405,10/31/2007
+77,Al Majmoua Lebanese Association for Development,active,4,Full,LB,MidEast,Lebanon,country,33.833333,35.833333,1.026304781,0,4588475,4.588475,3498,9/12/2007
+78,"Soro Yiriwaso, a partner of Save the Children",active,3,Full,ML,Africa,Mali,country,17,-4,24.64591607,0,3114075,3.114075,3691,2/13/2008
+79,Yamida (Yayasan Mitra Dhuafa),closed,0,Full,ID,Asia,Indonesia,country,-5,120,0,0,1450,0.00145,13,9/21/2007
+80,Palestine for Credit & Development (FATEN),active,4,Full,PS,MidEast,Palestine,country,31.92157,35.203285,1.801512148,0.096933272,2735825,2.735825,1523,6/18/2009
+81,Apoyo Integral,active,4.5,Full,SV,CentrA,El Salvador,country,13.833333,-88.916667,3.996889503,0.303760768,2573425,2.573425,3268,12/19/2007
+82,Koperasi  Mitra Usaha Kecil (MUK),active,3,Full,ID,Asia,Indonesia,country,-5,120,0.170221701,0.138505601,888800,0.8888,1389,8/31/2007
+84,Pearl Microfinance Limited,active,3,Full,UG,Africa,Uganda,country,2,33,44.43415194,0.163227014,8099525,8.099525,3605,9/9/2007
+85,SEDA,active,1.5,Full,VN,Asia,Viet Nam,country,16.166667,107.833333,0,0,1370525,1.370525,1704,10/31/2007
+87,Tujijenge Tanzania Ltd,active,3,Full,TZ,Africa,Tanzania,country,-6,35,5.85739219,0,3651050,3.65105,1247,11/7/2007
+88,Sinapi Aba Trust (SAT),active,Not Rated,Basic,GH,Africa,Ghana,country,8,-2,0,0,3871075,3.871075,5614,11/7/2007
+90,Sero Lease and Finance Ltd. (SELFINA),closed,0,Full,TZ,Africa,Tanzania,country,-6,35,0,12.57059144,1184825,1.184825,3579,11/17/2007
+91,Christian Rural Aid Network (CRAN),active,1,Full,GH,Africa,Ghana,country,8,-2,15.59689538,0.155391596,2279075,2.279075,5764,12/6/2007
+92,Opportunity International- Wedco Ltd.,closed,0,Full,KE,Africa,Kenya,country,1,38,0,0,155375,0.155375,56,12/11/2007
+93,EDAPROSPO,active,3.5,Full,PE,SouthA,Peru,country,-10,-76,0.120862201,0,3467650,3.46765,2257,12/27/2007
+96,Fundación León 2000,active,3,Full,NI,CentrA,Nicaragua,country,13,-85,2.884546627,0.311099268,3056950,3.05695,5716,4/11/2008
+97,FAPE,active,1.5,Full,GT,CentrA,Guatemala,country,15.5,-90.25,9.26718463,2.782587235,784300,0.7843,957,12/11/2007
+98,AFODENIC,active,2.5,Full,NI,CentrA,Nicaragua,country,13,-85,2.650736855,0.107692419,3640525,3.640525,6172,12/17/2007
+99,FECECAV,paused,2,Full,TG,Africa,Togo,country,8,1.166667,99.84262594,0,1269000,1.269,1744,12/12/2007
+100,IMON International,active,4,Full,TJ,Asia,Tajikistan,country,39,71,0.07844652,0.030845183,6887150,6.88715,5628,12/24/2007
+101,"Zene za Zene, a partner of Women for Women International",paused,4,Full,BA,EE,Bosnia and Herzegovina,country,44.25,17.833333,0,0.059477709,441325,0.441325,610,12/18/2007
+102,BRAC Tanzania,closed,0,Full,TZ,Africa,Tanzania,country,-6,35,0,0,1392625,1.392625,3360,12/22/2007
+104,Alidé,active,2.5,Full,BJ,Africa,Benin,country,9.5,2.25,1.330700721,0.108058739,1838325,1.838325,3633,1/30/2008
+105,"CAURIE Microfinance, a partner of Catholic Relief Services",active,3,Full,SN,Africa,Senegal,country,14,-14,0,0,3387050,3.38705,2596,2/22/2008
+106,"Hattha Kaksekar Limited (HKL), a partner of Save the Children",active,4.5,Full,KH,Asia,Cambodia,country,13,105,0.283782107,0.025539639,4392400,4.3924,7418,2/14/2008
+107,BRAC South Sudan,active,2,Full,QS,Africa,South Sudan,country,4.85,31.6,0.40819232,0,1580900,1.5809,4567,3/1/2008
+108,"UIMCEC, a partner of ChildFund International",active,2.5,Full,SN,Africa,Senegal,country,14,-14,5.773853789,0,1601375,1.601375,2803,2/9/2008
+109,AMK (Angkor Microfinance Kampuchea),paused,5,Full,KH,Asia,Cambodia,country,13,105,0,0.405384991,7122575,7.122575,7943,2/18/2008
+110,Emprender,active,3.5,Full,BO,SouthA,Bolivia,country,-17,-65,0.592563635,0.175141069,3305250,3.30525,3347,3/10/2008
+111,Women and Associations for Gain both Economic and Social (WAGES),active,3.5,Full,TG,Africa,Togo,country,8,1.166667,1.899949304,0,2755575,2.755575,3792,3/8/2008
+112,Micro Credit for Development and Transformation SACCO (MCDT SACCO),pilot,2,Full,UG,Africa,Uganda,country,2,33,0,0,1112450,1.11245,2619,3/20/2008
+113,Asociación ASDIR,active,3,Full,GT,CentrA,Guatemala,country,15.5,-90.25,3.127824822,0.803053267,1418150,1.41815,1374,5/30/2008
+115,Ameen s.a.l.,active,4,Full,LB,MidEast,Lebanon,country,33.833333,35.833333,2.803031127,0.040484287,3628125,3.628125,2988,9/16/2008
+116,XacBank,active,5,Full,MN,Asia,Mongolia,country,46,105,0.453521446,0.089922427,5324950,5.32495,4331,1/9/2009
+117,"Vision Finance Company s.a. (VFC), a partner of World Vision International",active,3,Full,RW,Africa,Rwanda,country,-2,30,0,0,2369375,2.369375,2477,5/24/2008
+118,"Prisma Honduras, S.A.",active,2,Full,HN,CentrA,Honduras,country,15,-86.5,2.036483338,0.553185684,1486775,1.486775,2301,7/4/2008
+119,Asociación Arariwa,active,3,Full,PE,SouthA,Peru,country,-10,-76,0.633196826,0,5226525,5.226525,7684,8/31/2008
+120,ADIM (Asociación Alternativa Para el Desarrollo Integral de las Mujeres),active,2,Full,NI,CentrA,Nicaragua,country,13,-85,0.204610614,0.021930552,1215400,1.2154,1867,10/1/2008
+121,"Fund for Thanh Hoa Poor Women (FPW), a partner of Save the Children",active,3,Full,VN,Asia,Viet Nam,country,16.166667,107.833333,0,0,929250,0.92925,757,11/14/2008
+122,"Ryada, a partner of CHF International",active,3.5,Full,PS,MidEast,Palestine,country,31.92157,35.203285,3.87959306,0.333915498,673350,0.67335,317,11/24/2008
+123,"Alalay sa Kaunlaran, Inc. (ASKI)",active,3.5,Full,PH,Asia,Philippines,country,13,122,3.685112281,0.001181517,4386275,4.386275,10722,11/22/2008
+124,"Ahon sa Hirap, Inc. (ASHI)",closed,0,Full,PH,Asia,Philippines,country,13,122,0,0,745300,0.7453,1763,11/14/2008
+125,"Community Economic Ventures, Inc. (CEVI), a partner of VisionFund International",active,3.5,Full,PH,Asia,Philippines,country,13,122,17.60123332,0.029708454,1634175,1.634175,6944,11/19/2008
+126,Paglaum Multi-Purpose Cooperative (PMPC),active,3,Full,PH,Asia,Philippines,country,13,122,0,0,2492050,2.49205,7721,11/21/2008
+127,EDESA,active,2.5,Full,CR,CentrA,Costa Rica,country,10,-84,4.579500025,0,612175,0.612175,629,2/10/2009
+128,"Hagdan sa Pag-uswag Foundation, Inc. (HSPFI)",active,3,Full,PH,Asia,Philippines,country,13,122,0.481005734,0,2416875,2.416875,12515,2/17/2009
+129,Tanaoba Lais Manekat Foundation (TLM),active,4,Full,ID,Asia,Indonesia,country,-5,120,1.59279748,2.028190172,306625,0.306625,328,3/12/2009
+130,"Fundacion Realidad A.C (FRAC), a partner of World Vision International",active,3.5,Full,MX,NorthA,Mexico,country,23,-102,2.491313007,0.089388274,3219025,3.219025,2204,6/21/2009
+131,ACCION USA,active,3.5,Full,US,NorthA,United States,country,39.76,-98.5,0.899254819,7.664070796,1251800,1.2518,262,6/10/2009
+132,Opportunity Fund,active,3.5,Full,US,NorthA,United States,country,39.76,-98.5,1.640098404,1.760987429,538625,0.538625,98,6/10/2009
+133,"Kenya Agency for Development of Enterprise and Technology (KADET), a partner of World Vision International",active,3.5,Full,KE,Africa,Kenya,country,1,38,6.491555871,0.001022483,4320200,4.3202,9859,5/29/2009
+135,MCC Mol Bulak Finance LLC,active,4,Full,KG,Asia,Kyrgyzstan,country,41,75,0.212244281,0,2155875,2.155875,1939,6/15/2009
+136,Gata Daku Multi-purpose Cooperative (GDMPC),active,3,Full,PH,Asia,Philippines,country,13,122,0,0,1703050,1.70305,6059,5/20/2009
+137,Fundación ESPOIR,active,4,Full,EC,SouthA,Ecuador,country,-2,-77.5,1.387757121,0,4077625,4.077625,4011,6/28/2009
+138,SMEP Deposit Taking Microfinance Limited,active,3,Full,KE,Africa,Kenya,country,1,38,3.593452419,0,814825,0.814825,2164,7/19/2009
+139,Caja Rural Señor de Luren,active,3.5,Full,PE,SouthA,Peru,country,-10,-76,2.050777197,3.612212766,809600,0.8096,1358,10/23/2009
+140,CIDRE,active,3.5,Full,BO,SouthA,Bolivia,country,-17,-65,2.927989431,1.376645746,857500,0.8575,826,7/7/2009
+141,"Local Enterprise Assistance Program (LEAP), a partner of World Hope International and World Relief",paused,2.5,Full,LR,Africa,Liberia,country,6.5,-9.5,100,2.606839291,952550,0.95255,1918,6/25/2009
+142,Faulu Kenya,active,3,Full,KE,Africa,Kenya,country,1,38,1.878383783,0.043557976,2255575,2.255575,4678,7/19/2009
+143,Edpyme Alternativa,active,3.5,Full,PE,SouthA,Peru,country,-10,-76,4.804129834,0.120544839,2222550,2.22255,4559,8/11/2009
+144,Center for Community Transformation Credit Cooperative (CCT),active,3,Full,PH,Asia,Philippines,country,13,122,1.155695497,0,987650,0.98765,2344,6/25/2009
+145,"Negros Women for Tomorrow Foundation, Inc. (NWTF)",active,4.5,Full,PH,Asia,Philippines,country,13,122,0.289001123,0.07465854,3153250,3.15325,7523,7/10/2009
+146,Nor Horizon Universal Credit Organization Limited Liability Company,active,3,Full,AM,EE,Armenia,country,40,45,0,0,1239475,1.239475,619,8/3/2009
+147,Banco D-MIRO S.A.,active,4,Full,EC,SouthA,Ecuador,country,-2,-77.5,2.316344623,0.916863457,2223275,2.223275,2466,10/23/2009
+148,Association for Rural Development (ARD),active,2.5,Full,SL,Africa,Sierra Leone,country,8.5,-11.5,15.15703941,5.612877376,1096750,1.09675,1330,9/30/2009
+149,Al-Thiqa Organization,paused,3,Full,IQ,MidEast,Iraq,country,33,44,0,0,287600,0.2876,117,10/26/2009
+150,FUDECOSUR,active,2.5,Full,CR,CentrA,Costa Rica,country,10,-84,4.784267531,0,569675,0.569675,713,10/8/2009
+151,Fundacion Mujer,active,2,Full,CR,CentrA,Costa Rica,country,10,-84,4.227647372,9.705372543,363650,0.36365,350,11/23/2009
+152,AREGAK Universal Credit Organization,pilot,3.5,Full,AM,EE,Moldova,country,40,45,0,0,281400,0.2814,181,5/11/2010
+153,LAPO Sierra Leone (LAPOSL),paused,3.5,Full,SL,Africa,Sierra Leone,country,8.5,-11.5,100,0,31450,0.03145,57,3/2/2010
+154,Fundación Mario Santo Domingo (FMSD),active,3,Full,CO,SouthA,Colombia,country,4,-72,3.886459106,0.125508511,1456850,1.45685,2009,12/19/2009
+155,BRAC Sri Lanka,closed,0,Full,LK,Asia,Sri Lanka,country,7,81,0,0,54300,0.0543,264,2/4/2010
+156,Juhudi Kilimo (JK),active,3,Full,KE,Africa,Kenya,country,1,38,6.689454346,0.273800178,1445025,1.445025,2536,1/15/2010
+157,Fondo Esperanza,active,3,Full,CL,SouthA,Chile,country,-30,-71,0.997677698,0.147031773,1040625,1.040625,498,12/28/2009
+158,CrediComun,active,3,Full,MX,NorthA,Mexico,country,23,-102,100,0.809558413,1908425,1.908425,623,2/9/2010
+159,Cooperativa San Jose,active,4,Full,EC,SouthA,Ecuador,country,-2,-77.5,2.427787479,0,1894275,1.894275,2383,1/27/2010
+160,"Hekima, a partner of World Relief",active,2.5,Full,CD,Africa,The Democratic Republic of the Congo,country,0,25,0.506441808,0,941950,0.94195,234,3/12/2010
+161,"Urwego Opportunity Bank of Rwanda (UOB), a partner of World Relief, HOPE International, and Opportunity International",active,4,Full,RW,Africa,Rwanda,country,-2,30,0.120800394,0,1354000,1.354,1746,6/11/2010
+162,"Turame Community Finance, a partner of World Relief and HOPE International",active,3,Full,BI,Africa,Burundi,country,-3.5,30,7.830759746,0,874850,0.87485,253,3/27/2010
+163,"HOFOKAM Ltd., a partner of Catholic Relief Services",active,3,Full,UG,Africa,Uganda,country,2,33,6.753410752,0.136197691,1817400,1.8174,2925,2/24/2010
+164,Yehu Microfinance Trust,active,3,Full,KE,Africa,Kenya,country,1,38,3.362219593,0.12980416,1483750,1.48375,4108,3/30/2010
+165,HOPE Congo S.A.,pilot,1,Full,CG,Africa,Congo,country,-1,15,2.245223453,0,364850,0.36485,550,6/2/2010
+166,CHF International Access to Credit Services Initiatives (ACSI) Iraq,active,3.5,Full,IQ,MidEast,Iraq,country,33,44,0.861941833,0.935278713,1803575,1.803575,771,9/29/2010
+167,PADECOMSM,active,3.5,Full,SV,CentrA,El Salvador,country,13.833333,-88.916667,3.151778049,1.43585907,1972600,1.9726,3892,5/21/2010
+168,FAMA OPDF,pilot,4,Full,HN,CentrA,Honduras,country,15,-86.5,3.157216529,0,199025,0.199025,228,5/29/2010
+169,"SEF International UCO LLC, a partner of World Vision International",active,3.5,Full,AM,EE,Armenia,country,40,45,0.102171886,0,1396175,1.396175,598,5/25/2010
+170,Amasezerano Community Banking S.A.,active,3,Full,RW,Africa,Rwanda,country,-2,30,2.696392239,0.29207173,788475,0.788475,654,6/16/2010
+171,Bai Tushum & Partners,active,4,Full,KG,Asia,Kyrgyzstan,country,41,75,0.107174535,0,1402000,1.402,828,7/6/2010
+172,Capital Aid Fund for Employment of the Poor (CEP),pilot,4,Full,VN,Asia,Viet Nam,country,16.166667,107.833333,0.229493127,0,445650,0.44565,679,6/16/2011
+173,ACCION Texas Inc.,active,3.5,Full,US,NorthA,United States,country,39.76,-98.5,2.202744629,8.402026911,762050,0.76205,136,10/20/2010
+174,Tamweelcom,active,4,Full,JO,MidEast,Jordan,country,31,36,1.004057808,0,549950,0.54995,512,12/2/2010
+175,Koret Israel Economic Development Funds (KIEDF),active,1.5,Full,IL,MidEast,Israel,country,31.5,34.75,2.410685875,0,306400,0.3064,113,12/8/2010
+176,MiCredito,active,2.5,Full,NI,CentrA,Nicaragua,country,13,-85,0.855309431,0,476000,0.476,756,12/1/2010
+177,Interactuar,active,3.5,Full,CO,SouthA,Colombia,country,4,-72,0,0,994675,0.994675,1438,12/16/2010
+178,Womens Development Businesses (WDB),pilot,3,Full,ZA,Africa,South Africa,country,-30,26,99.57984407,0,115375,0.115375,108,11/29/2010
+179,Finadev Benin,pilot,3,Full,BJ,Africa,Benin,country,9.5,2.25,0,0,70575,0.070575,94,12/6/2010
+180,Transcapital Company Ltd.,active,3,Full,MN,Asia,Mongolia,country,46,105,1.455744735,0,321425,0.321425,244,12/28/2010
+181,LLC Micro Finance Organization Credo,active,4,Full,GE,EE,Georgia,country,42,43.5,0,0,731225,0.731225,730,1/23/2011
+182,BRAC Liberia Microfinance Company Limited,pilot,2.5,Full,LR,Africa,Liberia,country,6.5,-9.5,4.474889786,0,249275,0.249275,855,4/6/2011
+183,BRAC Sierra Leone Microfinance Company Limited,pilot,3,Full,SL,Africa,Sierra Leone,country,8.5,-11.5,2.867310789,0,195575,0.195575,192,3/24/2011
+184,MicroKing Savings and Credit Company (MKF),active,3,Full,ZW,Africa,Zimbabwe,country,-19,29,11.55429115,0,1014650,1.01465,480,3/30/2011
+185,National Microfinance Bank,active,3.5,Full,JO,MidEast,Jordan,country,31,36,0.026755138,8.026481802,822500,0.8225,695,3/30/2011
+186,Grameen America,pilot,2,Full,US,NorthA,United States,country,39.76,-98.5,0,0,29000,0.029,10,3/25/2011
+187,Micro Start/AFD,active,1.5,Full,BF,Africa,Burkina Faso,country,13,-2,6.413626886,0,136125,0.136125,181,4/21/2011
+188,"FODEMI, a partner of World Vision International",pilot,4,Full,EC,SouthA,Ecuador,country,-2,-77.5,2.680000567,0,285900,0.2859,377,4/28/2011
+189,VisionFund Indonesia,pilot,2,Full,ID,Asia,Indonesia,country,-5,120,1.590585217,0,142125,0.142125,164,5/27/2011
+190,Fundacion Alternativa,pilot,3.5,Full,EC,SouthA,Ecuador,country,-2,-77.5,1.806904248,0,123825,0.123825,138,7/5/2011
+198,Maya,pilot,1.5,Full,TR,MidEast,Turkey,country,39,35,0.505862065,0,48250,0.04825,39,8/12/2011
+199,Fundacion Campo,pilot,3,Full,SV,CentrA,El Salvador,country,13.833333,-88.916667,0.410797363,0,204775,0.204775,282,9/8/2011
+200,ASI Federal Credit Union,pilot,3.5,Full,US,NorthA,United States,country,39.76,-98.5,1.241702096,0,302500,0.3025,35,8/28/2011
+201,Organizacion de Desarollo Empresarial Femenino (ODEF),pilot,4,Full,HN,CentrA,Honduras,country,15,-86.5,0.290386267,0,259800,0.2598,426,10/9/2011
+202,One Acre Fund,pilot,Not Rated,Full,KE,Africa,Kenya,country,1,38,0,0,602375,0.602375,881,9/20/2011
+203,Milango Financial Services,pilot,2.5,Full,KE,Africa,Kenya,country,1,38,0.837937605,0,177425,0.177425,348,9/28/2011
+204,VisionFund Cambodia,pilot,4,Full,KH,Asia,Cambodia,country,13,105,0.028483427,0,262050,0.26205,440,9/24/2011
+205,Al-Amal Microfinance Bank,pilot,3,Full,YE,MidEast,Yemen,country,15.5,47.5,0,0,82450,0.08245,121,11/2/2011
+206,Finance (SS) Ltd.,pilot,1.5,Full,QS,Africa,South Sudan,country,4.85,31.6,1.097853811,0,85875,0.085875,140,10/27/2011
+207,VisionFund AzerCredit LLC,pilot,3.5,Full,AZ,Asia,Azerbaijan,country,40.5,47.5,0,0,61250,0.06125,47,11/29/2011
+208,Mbinga Community Bank,pilot,2,Full,TZ,Africa,Tanzania,country,-6,35,0,0,0,0,1,11/11/2011
+210,Mobile Transactions (MTZ),pilot,Not Rated,Full,ZM,Africa,Zambia,country,-15,30,0,0,74825,0.074825,15,1/27/2012
+215,"MDO Arvand, LLC",pilot,3.5,Full,TJ,Asia,Tajikistan,country,39,71,0,0,148000,0.148,210,11/29/2011
+216,Relief International Microfinance Iraq,pilot,2.5,Full,IQ,MidEast,Iraq,country,33,44,0,0,146900,0.1469,63,12/23/2011
+217,ACEP Cameroun,pilot,4,Full,CM,Africa,Cameroon,country,6,12,0,0,850,0.00085,2,3/30/2012
+218,Strathmore University,pilot,Not Rated,Full,KE,Africa,Kenya,country,1,38,0,0,40875,0.040875,21,2/3/2012
